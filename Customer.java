@@ -16,8 +16,7 @@ public class Customer
      */
     public Customer(int id, String nama)
     {
-        id = 0;
-        nama = String[];
+       
     }
 
     /**
@@ -33,16 +32,16 @@ public class Customer
     
     public String getNama()
     {
-        return String[];
+        return "muflih";
     }
     
     public void setID(int id)
     {
-        return 0;
+       
     }
     
     public void setNama(String nama)
     {
-        return String[];
+       
     }
 }

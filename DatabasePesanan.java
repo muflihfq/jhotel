@@ -15,7 +15,7 @@ public class DatabasePesanan
      */
     public DatabasePesanan()
     {
-        return String[];
+        
     }
 
     /**
@@ -36,17 +36,17 @@ public class DatabasePesanan
     
     public Pesanan getPesanan(Customer cust)
     {
-        return String[];
+        return null;
     }
     
-    public String[] getPesananDatabase()
+    public String getPesananDatabase()
     {
-        return String[];
+        return "null";
     }
     
     public void pesananDibatalkan(Pesanan pesan)
     {
-        return String[];
+       
     }
     
 }

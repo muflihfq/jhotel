@@ -15,7 +15,7 @@ public class DatabaseCustomer
      */
     public DatabaseCustomer()
     {
-        return Strin[];
+        
     }
 
     /**
@@ -34,9 +34,9 @@ public class DatabaseCustomer
         return false;
     }
     
-    public String[] getCustomerDatabase()
+    public String getCustomerDatabase()
     {
-        return String[];
+        return "test";
     }
     
 }

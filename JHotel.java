@@ -15,7 +15,7 @@ public class JHotel
      */
     public JHotel()
     {
-        return String[]
+       
     }
 
     /**
@@ -24,8 +24,8 @@ public class JHotel
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void main(Stringp[] args)
+    public void main(String[] args)
     {
-        return String[];
+        
     }
 }

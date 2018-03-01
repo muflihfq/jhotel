@@ -20,7 +20,7 @@ public class Pesanan
    public Pesanan()
       
    {
-      return String[];
+      
     }
 
     
@@ -33,7 +33,7 @@ public class Pesanan
     
     public Customer getPelanggan()
     {
-        return string[];
+        return null;
     
     }
     
@@ -51,22 +51,22 @@ public class Pesanan
     
     public void setBiaya(double biaya)
     {
-       return 0;
+       
     }
     
     public void setPelanggan(Customer baru)
     {
-        return String[];
+     
     }
     
     public void setStatusDiproses(boolean diproses)
     {
-        return false;
+        
     }
     
     public void setStatusSelesai(boolean diproses)
     {
-        return false;
+        
     }
     
     
