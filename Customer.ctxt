@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Customer
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Customer\ here.\r\n\r\n\ @author\ muflih\ fathan\ q\r\n\ @version\ 03/01/2018\r\n
+comment1.params=id\ nama
+comment1.target=Customer(int,\ java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Customer\r\n
+comment2.params=
+comment2.target=int\ getID()
+comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment3.params=
+comment3.target=java.lang.String\ getNama()
+comment4.params=id
+comment4.target=void\ setID(int)
+comment5.params=nama
+comment5.target=void\ setNama(java.lang.String)
+comment6.params=
+comment6.target=void\ printData()
+numComments=7
