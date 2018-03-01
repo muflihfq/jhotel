@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class JHotel here.
+ * Merupakan main class dari package j hotel
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author muflih fathan q
+ * @version 03/01/2018
  */
 public class JHotel
 {
@@ -11,7 +11,7 @@ public class JHotel
     //private int x;
 
     /**
-     * Constructor for objects of class JHotel
+     * Constructor pada class JHotel
      */
     public JHotel()
     {
@@ -19,10 +19,10 @@ public class JHotel
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * metode untuk menjalankan package
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @param  args
+     * 
      */
     public void main(String[] args)
     {
