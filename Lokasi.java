@@ -66,6 +66,9 @@ public class Lokasi
     
     public void printData()
     {
+        System.out.println("X koordinat :" +x_coord);
+        System.out.println("Y koordinat :" +y_coord);
+        System.out.println("Deskripsi :" +deskripsiLokasi);
         
     }
     

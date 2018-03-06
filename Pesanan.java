@@ -157,6 +157,11 @@ public class Pesanan
      */
     public void printData()
     {
-        
+         System.out.println("Biaya :" +biaya);
+         System.out.println("Pelanggan :" +pelanggan);
+         System.out.println("nama pelanggan" +nama_pelanggan);
+         System.out.println("Jenis Kamar :" +jenis_kamar);
+         //System.out.println isDiproses;
+         //System.out.println isSelesai;
     }
 }
