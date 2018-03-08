@@ -15,6 +15,7 @@ public class Pesanan
     private String jenis_kamar;
     private boolean isDiproses;
     private boolean isSelesai;
+    private Room kamar;
    
 
     
@@ -79,6 +80,12 @@ public class Pesanan
     
     }
     
+    public Room getRoom()
+    {
+        return kamar;
+    }
+    
+    
     /**
      * metode untuk menampilkan status pemesan telah selesai
      *
@@ -121,8 +128,7 @@ public class Pesanan
      */
     public void setStatusDiproses(boolean diproses)
     {
-        //isDiproses = true;
-        //isSelesai = false;
+        isDiproses = diproses;
     }
     
     /**
@@ -133,8 +139,7 @@ public class Pesanan
      */
     public void setStatusSelesai(boolean diproses)
     {
-        //isSelesai = true;
-        //isDiproses = false; 
+        isSelesai = diproses; 
     }
     
     /**
@@ -147,6 +152,11 @@ public class Pesanan
     {
         this.nama_pelanggan = nama_pelanggan;
         return nama_pelanggan;
+    }
+    
+    public void setRoom(Room kamar)
+    {
+        this.kamar = kamar;
     }
     
     /**
