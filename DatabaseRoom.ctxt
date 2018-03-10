@@ -1,14 +1,16 @@
 #BlueJ class context
 comment0.target=DatabaseRoom
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ DatabaseRoom\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Class\ DatabaseRoom\ berfungsi\ sebagai\ penyimpanan\ informasi\r\n\ terkait\ kamar\ pada\ hotel\r\n\r\n\ @author\ muflih\ fathan\ q\r\n\ @version\ 03/10/2018\r\n
 comment1.params=
 comment1.target=DatabaseRoom()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ DatabaseRoom\r\n
 comment2.params=baru
 comment2.target=boolean\ addRoom(Customer)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment2.text=\r\n\ metode\ untuk\ membuat\ kamar\ telah\ terisi\ customer\r\n\ \r\n\ @param\ baru\ \ merupakan\ nama\ customer\ yang\r\n\ memesan\ kamar\ tersebut\r\n\ \r\n
 comment3.params=id
 comment3.target=boolean\ removeRoom(int)
+comment3.text=\r\n\ metode\ untuk\ membuat\ kamar\ menjadi\ kososng\r\n\ \r\n\ @param\ id\ \ id\ dari\ customer\r\n\ \r\n
 comment4.params=
 comment4.target=java.lang.String\ getRoomDatabase()
+comment4.text=\r\n\ metode\ untuk\ mengambil\ dataase\ kamar\ pada\ hotel\r\n\ \r\n\ \r\n\ \r\n
 numComments=5

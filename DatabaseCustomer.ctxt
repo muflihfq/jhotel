@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=DatabaseCustomer
-comment0.text=\r\n\ Class\ untuk\ menyimpan\ database\ customer\r\n\r\n\ @author\ muflih\ fathan\ q\r\n\ @version\ 03/01/2018\r\n
+comment0.text=\r\n\ Class\ untuk\ menyimpan\ database\ customer\r\n\r\n\ @author\ muflih\ fathan\ q\r\n\ @version\ 03/10/2018\r\n
 comment1.params=
 comment1.target=DatabaseCustomer()
 comment1.text=\r\n\ Constructor\ untuk\ class\ DatabaseCustomer\r\n

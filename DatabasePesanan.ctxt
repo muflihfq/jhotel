@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=DatabasePesanan
-comment0.text=\r\n\ class\ ini\ berfungsi\ sebagai\ database\r\n\ atau\ penyimpanan\ data\ terkait\ pemesanan\r\n\r\n\ @author\ muflih\ fathan\ q\r\n\ @version\ 03/01/2018\r\n
+comment0.text=\r\n\ class\ ini\ berfungsi\ sebagai\ database\r\n\ atau\ penyimpanan\ data\ terkait\ pemesanan\r\n\r\n\ @author\ muflih\ fathan\ q\r\n\ @version\ 03/10/2018\r\n
 comment1.params=
 comment1.target=DatabasePesanan()
 comment1.text=\r\n\ Constructor\ untuk\ objek\ pada\ class\ DatabasePesanan\r\n

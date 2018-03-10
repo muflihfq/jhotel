@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Hotel
-comment0.text=\r\n\ Class\ hotel\ berikut\ berfungsi\ untuk\ mendapatkan\ dan\ memasukkan\r\n\ data-data\ hotel.\r\n\r\n\ @author\ muflih\ fathan\ q\r\n\ @version\ 03/01/2018\r\n
+comment0.text=\r\n\ Class\ hotel\ berikut\ berfungsi\ untuk\ mendapatkan\ dan\ memasukkan\r\n\ data-data\ hotel.\r\n\r\n\ @author\ muflih\ fathan\ q\r\n\ @version\ 03/10/2018\r\n
 comment1.params=nama\ lokasi\ bintang
 comment1.target=Hotel(java.lang.String,\ Lokasi,\ int)
 comment1.text=\r\n\ konstruktor\ pada\ class\ hotel\r\n\ @param\ nama,\ lokasi,\ bintang\r\n
