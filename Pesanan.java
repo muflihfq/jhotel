@@ -4,7 +4,7 @@
  * dengan memasukkan harga yang dipesan dan pemesannya.
  *
  * @author muflih fathan q
- * @version 03/01/2018
+ * @version 03/10/2018
  */
 public class Pesanan
 {
@@ -12,7 +12,7 @@ public class Pesanan
     private double biaya;
     private Customer pelanggan;
     private String nama_pelanggan;
-    private String jenis_kamar;
+    private TipeKamar tipe_kamar;
     private boolean isDiproses;
     private boolean isSelesai;
     private Room kamar;
@@ -32,16 +32,6 @@ public class Pesanan
    {
       this.biaya = biaya;
       this.pelanggan = pelanggan;
-    }
-    
-   /**
-     * metode untuk menampilkan nama pelanggan
-     *
-     * @return nama_pelanggan - data terkait nama pelanggan
-     * 
-     */
-    public String getNama(){
-     return nama_pelanggan;  
     }
     
     /**
@@ -68,6 +58,29 @@ public class Pesanan
     
     }
     
+    
+    /**
+     * metode untuk menampilkan nama pelanggan
+     *
+     * @return nama_pelanggan - data terkait nama pelanggan
+     * 
+     */
+    public String getNamaPelanggan(){
+     return nama_pelanggan;  
+    }
+    
+    /**
+     * metode untuk menampilkan tipe kamar
+     *
+     * @return tipe_kamar
+     * jenis kamar yang besangkutan
+     * 
+     */
+    public TipeKamar getTipeKamar()
+    {
+       return tipe_kamar;
+    }
+    
     /**
      * metode untuk menampilkan status pemesan sedang diproses
      *
@@ -78,11 +91,6 @@ public class Pesanan
     {
         return isDiproses;
     
-    }
-    
-    public Room getRoom()
-    {
-        return kamar;
     }
     
     
@@ -98,6 +106,20 @@ public class Pesanan
     
     }
     
+    
+    /**
+     * metode untuk menampilkan kamar
+     *
+     * @return kamar
+     * 
+     * 
+     */
+    public Room getRoom()
+    {
+        return kamar;
+    }
+    
+    
     /**
      * metode untuk memasukkan harga pesanan
      *
@@ -112,12 +134,37 @@ public class Pesanan
     /**
      * metode untuk memasukkan nama pemesan
      *
-     * @param baru - baru adalah nama pemesan atau customer
+     * @param pelanggan 
+     * pelanggan adalah nama pemesan atau customer
      * 
      */
-    public void setPelanggan(Customer baru)
+    public void setPelanggan(Customer pelanggan)
     {
-       baru = pelanggan;
+       this.pelanggan = pelanggan;
+    }
+    
+    /**
+     * metode untuk memasukkan nama pelanggan
+     * 
+     * @param nama_pelanggan 
+     * data terkait nama pelanggan
+     * 
+     */
+    public void setNamaPelanggan(String nama_pelanggan)
+    {
+        this.nama_pelanggan = nama_pelanggan;
+    }
+    
+    /**
+     * metode untuk memasukkan tipe kamar
+     *
+     * @param tipe kamar
+     * data terkait jenis kamar
+     * 
+     */
+    public void setTipeKamar(TipeKamar tipe_kamar)
+    {
+        this.tipe_kamar = tipe_kamar;
     }
     
     /**
@@ -148,11 +195,7 @@ public class Pesanan
      * @param nama - nama adalah nama pelanggan
      * 
      */
-    public String setNama(String nama)
-    {
-        this.nama_pelanggan = nama_pelanggan;
-        return nama_pelanggan;
-    }
+    
     
     public void setRoom(Room kamar)
     {
@@ -167,11 +210,15 @@ public class Pesanan
      */
     public void printData()
     {
-         System.out.println("Biaya :" +biaya);
-         System.out.println("Pelanggan :" +pelanggan);
-         System.out.println("nama pelanggan" +nama_pelanggan);
-         System.out.println("Jenis Kamar :" +jenis_kamar);
-         //System.out.println isDiproses;
-         //System.out.println isSelesai;
+        System.out.println("Nama Pelanggan :" +pelanggan.getNama());
+        System.out.println("Tipe Kamar :" +tipe_kamar);
+        System.out.println("Status diproses :" +isDiproses);
+        System.out.println("Status Selesai :" +isSelesai);
+        
+        //System.out.println("Biaya :" +biaya);
+        //System.out.println("Pelanggan :" +pelanggan);
+        //System.out.println(
+        //System.out.println isDiproses;
+        //System.out.println isSelesai;
     }
 }

@@ -1,14 +1,15 @@
 
 /**
- * Write a description of class DatabaseRoom here.
+ * Class DatabaseRoom berfungsi sebagai penyimpanan informasi
+ * terkait kamar pada hotel
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author muflih fathan q
+ * @version 03/10/2018
  */
 public class DatabaseRoom
 {
     // instance variables - replace the example below with your own
-    private String[] list_room;
+    private static String[] list_room;
     
 
     /**
@@ -21,26 +22,38 @@ public class DatabaseRoom
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * metode untuk membuat kamar telah terisi customer
+     * 
+     * @param baru  merupakan nama customer yang
+     * memesan kamar tersebut
+     * 
      */
-    public boolean addRoom(Customer baru)
+    public static boolean addRoom(Customer baru)
     {
         // put your code here
-        //
         return false;
     }
     
-    public boolean removeRoom(int id)
+    /**
+     * metode untuk membuat kamar menjadi kososng
+     * 
+     * @param id  id dari customer
+     * 
+     */
+    public static boolean removeRoom(int id)
     {
         return false;
     }
     
-    public String getRoomDatabase()
+    /**
+     * metode untuk mengambil dataase kamar pada hotel
+     * 
+     * 
+     * 
+     */
+    public static String getRoomDatabase()
     {
         //belum
-        return "test";
+        return "test" ;
     }
 }

@@ -4,7 +4,7 @@
  * data-data hotel.
  *
  * @author muflih fathan q
- * @version 03/01/2018
+ * @version 03/10/2018
  */
 public class Hotel
 {
@@ -97,8 +97,8 @@ public class Hotel
      */
     public void printData()
     {
-       System.out.println("Nama :" +nama);
-       System.out.println("Lokasi :" +lokasi);
+       System.out.println("Nama Hotel:" +nama);
+       System.out.println("Lokasi :" +lokasi.getDeskripsi());
        System.out.println("Bintang :" +bintang);
         
     }

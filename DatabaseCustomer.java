@@ -3,12 +3,12 @@
  * Class untuk menyimpan database customer
  *
 * @author muflih fathan q
- * @version 03/01/2018
+ * @version 03/10/2018
  */
 public class DatabaseCustomer
 {
     // instance variables - replace the example below with your own
-    private String[] list_customer;
+    private static String[] list_customer;
 
     /**
      * Constructor untuk class DatabaseCustomer
@@ -24,7 +24,7 @@ public class DatabaseCustomer
      * @param baru - baru merupakan variabel untuk customer baru
      * 
      */
-    public boolean addCustomer(Customer baru)
+    public static boolean addCustomer(Customer baru)
     {
         return false;
     }
@@ -35,7 +35,7 @@ public class DatabaseCustomer
      * @param  id id customer
      * 
      */
-    public boolean removeCustomer(int id)
+    public static boolean removeCustomer(int id)
     {
         return false;
     }
@@ -46,7 +46,7 @@ public class DatabaseCustomer
      * 
      * 
      */
-    public String getCustomerDatabase()
+    public static String getCustomerDatabase()
     {
         return "test";
     }

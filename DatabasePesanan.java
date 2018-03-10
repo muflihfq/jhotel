@@ -4,12 +4,12 @@
  * atau penyimpanan data terkait pemesanan
  *
  * @author muflih fathan q
- * @version 03/01/2018
+ * @version 03/10/2018
  */
 public class DatabasePesanan
 {
     // instance variables - replace the example below with your own
-    private String[] list_pesanan;
+    private static String[] list_pesanan;
 
     /**
      * Constructor untuk objek pada class DatabasePesanan
@@ -25,7 +25,7 @@ public class DatabasePesanan
      * @param  baru
      * 
      */
-    public boolean addPesanan(Pesanan baru)
+    public static boolean addPesanan(Pesanan baru)
     {
         return false;
     }
@@ -36,7 +36,7 @@ public class DatabasePesanan
      * @param  pesan
      * 
      */
-    public boolean removePesanan(Pesanan pesan)
+    public static boolean removePesanan(Pesanan pesan)
     {
         return false;
     }
@@ -47,7 +47,7 @@ public class DatabasePesanan
      * @param Customer
      * 
      */
-    public Pesanan getPesanan(Customer cust)
+    public static Pesanan getPesanan(Customer cust)
     {
         return null;
     }
@@ -59,7 +59,7 @@ public class DatabasePesanan
      * 
      */
     
-    public String getPesananDatabase()
+    public static String getPesananDatabase()
     {
         return "null";
     }
@@ -70,7 +70,7 @@ public class DatabasePesanan
      * @param  pesan
      * 
      */
-    public void pesananDibatalkan(Pesanan pesan)
+    public static void pesananDibatalkan(Pesanan pesan)
     {
        
     }

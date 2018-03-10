@@ -1,9 +1,10 @@
 
 /**
- * Write a description of class Room here.
+ * Class room berikut, memiliki fungsi sebagai penyimpanan data
+ * terkait informasi-informasi seputar kamar pada hotel
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author muflih fathan q
+ * @version 03/10/2018
  */
 public class Room
 {
@@ -21,17 +22,23 @@ public class Room
     /**
      * Constructor for objects of class Room
      */
-    public Room()
+    public Room(Hotel hotel, String nomor_kamar,
+                boolean isAvailable,Customer customer,
+                double dailyTariff, StatusKamar status_kamar)
     {
-        // initialise instance variables
-        //x = 0;
+        this.hotel = hotel;
+        this.nomor_kamar = nomor_kamar;
+        this.isAvailable = isAvailable;
+        this.customer = customer;
+        this.dailyTariff = dailyTariff;
+        this.status_kamar = status_kamar;
+        
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Metode untuk mengambil nama hotel
+     * 
+     * @return hotel nama hotel
      */
     public Hotel getHotel()
     {
@@ -39,111 +46,180 @@ public class Room
         return hotel;
     }
     
+    /**
+     * Metode untuk mengambil id hotel
+     * 
+     * @return id id hotel
+     */
     public int getID()
     {
         return id;
     }
     
+    /**
+     * Metode untuk mengambil nomor kamar pada hotel
+     * 
+     * @return nomor_kamar nomor kamar pada hotel
+     */
     public String getNomorKamar()
     {
         return nomor_kamar;
     }
     
+    /**
+     * Metode untuk mengambil status ketersediaan kamar
+     * 
+     * @return isAvailable status ketersediaan kamar
+     */
     public boolean getStatusAvailable()
     {
         return isAvailable;
     }
     
+    /**
+     * Metode untuk mengambil nama atau informasi terkait pemesan
+     * 
+     * @return customer informasi terkait pemesan kamar
+     */
     public Customer getCustomer()
     {
         return customer;
         
     }
     
+    /**
+     * Metode untuk mengambil biaya harian yang berlaku pada
+     * kamar
+     * 
+     * @return dailyTariff biaya harian kamar
+     */
     public double getDailyTariff()
     {
         return dailyTariff;
     }
     
+    /**
+     * Metode untuk mengambil nilai status kamar
+     * apakah booked, processed atau vacant
+     * 
+     * @return status_kamar merupakan enum dengan 3 pilihan diatas
+     */
     public StatusKamar getStatusKamar()
     {
         return status_kamar;
     }
     
+    /**
+     * Metode untuk mengambil info pesanan
+     * 
+     * @return pesan info terkait pesanan
+     */
     public Pesanan getPesanan()
     {
         return pesan;
         
     }
     
+    /**
+     * Metode untuk memasukkan nama hotel
+     * 
+     * @param hotel nama hotel
+     */
     public void setHotel(Hotel hotel)
     {
         this.hotel = hotel;
     
     }
     
+    /**
+     * Metode untuk memasukkan id hotel
+     * 
+     * @param id id hotel
+     */
     public void getID(int id)
     {
         this.id = id;
     }
     
+    /**
+     * Metode untuk memasukkan nomor_kamar pada hotel
+     * 
+     * @param nomor_kamar nomor kamar pada hotel
+     */
     public void setNomorKamar(String nomor_kamar)
     {
         this.nomor_kamar = nomor_kamar;
     }
     
+    /**
+     * Metode untuk memasukkan status ketersediaan kamar
+     * pada hotel
+     * 
+     * @param isAvailable status ketersediaan kamar
+     */
     public void setStatusAvailable(boolean isAvailable)
     {
-        
+        this.isAvailable = isAvailable;
     }
     
+    /**
+     * Metode untuk memasukkan informasi terkait customerr
+     * yang memesan kamar
+     * 
+     * @param customer info terkait customer
+     */
     public void setCustomer(Customer customer)
     {
         this.customer = customer;
     }
     
+    /**
+     * Metode untuk memasukkan jumlah biaya pada kamar
+     * 
+     * @param dailyTariff biaya harian yang berlaku pada kamar
+     */
     public void setDailyTariff(double dailyTariff)
     {
         this.dailyTariff = dailyTariff;
     }
     
+    /**
+     * Metode untuk memasukkan status kamar pada hotel
+     * 
+     * @param status_kamar enum terkait status kamar
+     */
     public void setStatusKamar(StatusKamar status_kamar)
     {
        this.status_kamar = status_kamar;
     }
     
+    /**
+     * Metode untuk memasukkan pesanan yang dipesan.
+     * 
+     * @param pesan info terkait pesanan yang dipesan oleh 
+     * customer
+     */
     public void setPesanan(Pesanan pesan)
     {
         this.pesan = pesan;
     }
     
+    /**
+     * metode untuk mencetak data
+     * 
+     */
     public void printData()
     {
+        System.out.println("Nama Hotel :" +hotel.getNama());
+        System.out.println("Nomor Kamar :" +nomor_kamar);
+        System.out.println("Status Ketersediaan :" +isAvailable);
+        System.out.println("Nama Pelanggan :" +customer.getNama());
+        System.out.println("Harga Kamar :" +dailyTariff);
+        System.out.println("Status Kamar :" +status_kamar);
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+           
+     
     
     
 }

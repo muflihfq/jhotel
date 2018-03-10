@@ -1,9 +1,10 @@
 
 /**
- * Enumeration class TipeKamar - write a description of the enum class here
- *
- * @author (your name here)
- * @version (version number or date here)
+ * Enum tipe kamar, berfungsi sebagai pilihan tipe kamar yang 
+ * tersedia pada hotel 
+ * 
+ * @author muflih fathan q
+ * @version 03/10/2018
  */
 public enum TipeKamar
 {
@@ -12,7 +13,7 @@ public enum TipeKamar
 
     private String tipe;
 
-    TipeKamar(String text)
+    TipeKamar(String tipe)
     {
         this.tipe = tipe;
     }

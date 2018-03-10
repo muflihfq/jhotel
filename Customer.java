@@ -3,7 +3,7 @@
  * Write a description of class Customer here.
  *
 * @author muflih fathan q
- * @version 03/01/2018
+ * @version 03/10/2018
  */
 public class Customer
 {
@@ -21,34 +21,56 @@ public class Customer
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * metode untuk menampilkan atau mengambil ID dari customer
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * 
+     * @return id    identifikasi dari customer
      */
     public int getID()
     {
         return id;
     }
     
+    /**
+     * metode untuk menampilkan atau mengambil nama dari customer
+     *
+     * 
+     * @return nama    nama customer
+     */
     public String getNama()
     {
         return nama;
     }
     
+    /**
+     * metode untuk memasukkan ID dari customer
+     *
+     * 
+     * @param id    identifikasi dari customer
+     */
     public void setID(int id)
     {
        this.id = id;
     }
     
+    /**
+     * metode untuk memasukkan nama dari customer
+     *
+     * 
+     * @param nama    nama customer
+     */
     public void setNama(String nama)
     {
        this.nama = nama;
     }
     
+    /**
+     * metode untuk mencetak data
+     * 
+     */
     public void printData()
     {
-        System.out.println("Nama :" +nama);
-        System.out.println("Id :" +id);
+        System.out.println("Nama Pelanggan:" +nama);
+        System.out.println("Id Pelanggan :" +id);
     }
 }

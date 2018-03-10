@@ -3,7 +3,7 @@
  * Class untuk menunjukkan lokasi atau tempat
  *
  * @author muflih fathan q
- * @version 03/01/2018
+ * @version 03/10/2018
  */
 public class Lokasi
 {
@@ -44,31 +44,58 @@ public class Lokasi
         return y_coord;
     }
     
+    /**
+     * metode untuk mengambil deskripsi dari lokasi
+     * 
+     * @return deskrispiLokasi berisi deskripsi lokasi terkait
+     */
     public String getDeskripsi()
     {
         return deskripsiLokasi;
     }
     
+    /**
+     * metode untuk memasukkan koordinat x lokasi
+     *
+     * 
+     * @param x_coord - koordinasi x lokasi
+     */
     public void setX(float x_coord)
     {
         this.x_coord = x_coord;
     }
     
+    /**
+     * metode untuk memasukkan koordinat y lokasi
+     *
+     * 
+     * @param y_coord - koordinasi y lokasi
+     */
+
     public void setY(float y_coord)
     {
         this.y_coord = y_coord;
     }
     
+    /**
+     * metode untuk memasukkan data deskripsi dari lokasi
+     * 
+     * @param deskrispiLokasi berisi deskripsi lokasi terkait
+     */
     public void setDeskripsi(String deskripsi)
     {
         deskripsiLokasi = deskripsi;
     }
     
+    /**
+     * metode untuk mencetak data
+     * 
+     */
     public void printData()
     {
         System.out.println("X koordinat :" +x_coord);
         System.out.println("Y koordinat :" +y_coord);
-        System.out.println("Deskripsi :" +deskripsiLokasi);
+        System.out.println("Deskripsi Lokasi :" +deskripsiLokasi);
         
     }
     

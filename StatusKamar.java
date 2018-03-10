@@ -1,10 +1,11 @@
-
 /**
- * Enumeration class StatusKamar - write a description of the enum class here
- *
- * @author (your name here)
- * @version (version number or date here)
+ * Enum Status kamar, berfungsi sebagai pilihan status kamar
+ * pada kamar hotel 
+ * 
+ * @author muflih fathan q
+ * @version 03/10/2018
  */
+ 
 public enum StatusKamar
 {
     Booked("Booked"),Processed("Processed"),Vacant("Vacant");

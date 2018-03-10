@@ -1,14 +1,15 @@
 
 /**
- * Write a description of class DatabaseHotel here.
+ * Class DatabaseHotel berfungsi sebagai database dari hotel
+ * yang ada
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author muflih fathan q
+ * @version 03/10/2018
  */
 public class DatabaseHotel
 {
     // instance variables - replace the example below with your own
-    private String[] list_hotel;
+    private static String[] list_hotel;
 
     /**
      * Constructor for objects of class DatabaseHotel
@@ -20,24 +21,39 @@ public class DatabaseHotel
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * metoded untuk menambahkan hotel baru pada database
+     * 
+     * 
+     * @param  baru  baru merupakan hotel baru 
+     * yang ingin ditambahkan
+     * 
      */
-    public boolean addHotel(Hotel baru)
+    public static boolean addHotel(Hotel baru)
     {
         // put your code here
         //return x + y;
         return false;
     }
     
-    public boolean removeHotel(int id)
+    /**
+     * metoded untuk menghapus hotel pada database
+     * 
+     * 
+     * @param  id id dari hotel yang ingin dihapus
+     * 
+     */
+    public static boolean removeHotel(int id)
     {
         return false;
     }
     
-    public String getRoomDatabase()
+    /**
+     * metoded untuk mengambil data hotel  pada database
+     * 
+     * 
+     * 
+     */
+    public static String getHotelDatabase()
     {
         //belum
         return "tes";
