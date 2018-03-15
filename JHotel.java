@@ -28,7 +28,46 @@ public class JHotel
      */
     public static void main(String[] args)
     {
+        Lokasi tempat = new Lokasi(23,45,"Depok");
+        Hotel rumah = new Hotel("Hotel",tempat,4);
         Customer customer = new Customer(99,"muflih");
+        SingleRoom signle = new SingleRoom(rumah,"23",true,StatusKamar.Vacant);
+        Pesanan pesan = new Pesanan(4,customer,signle);
+        
+        System.out.println("----------Pesanan Single--------");
+        tempat.printData();
+        customer.printData();
+        rumah.printData();
+        
+        System.out.println("Hasil Pesananan");
+        Administrasi method1 = new Administrasi();
+        method1.pesananDitugaskan(pesan,signle);
+        pesan.printData();
+        signle.printData();
+        
+        
+        System.out.println(signle instanceof SingleRoom);
+        DoubleRoom doble = new DoubleRoom(rumah,"24",true,StatusKamar.Vacant);
+        pesan.setJumlahHari(2);
+        pesan.setPelanggan(customer);
+        pesan.setRoom(doble);
+        
+        System.out.println("----------Pesanan Double--------");
+        
+        tempat.printData();
+        customer.printData();
+        rumah.printData();
+        
+        Administrasi method2 = new Administrasi();
+        method2.pesananDitugaskan(pesan,doble);
+        System.out.println("Hasil Pesananan");
+        pesan.printData();
+        doble.printData();
+        System.out.println(doble instanceof DoubleRoom);
+        
+        /*
+         * 
+         Customer customer = new Customer(99,"muflih");
         Pesanan pesan = new Pesanan(10000,customer);
         Lokasi tempat = new Lokasi(23,45,"Depok");
         pesan.setTipeKamar(TipeKamar.Single);
@@ -99,7 +138,7 @@ public class JHotel
         pesan.printData();
         method1.pesananDitugaskan(pesan,kamar);
         
-        
+        */
         
     }
 }
