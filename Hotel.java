@@ -92,7 +92,10 @@ public class Hotel
     
     public String toString()
     {
-        return null;
+        return "\nNama Hotel : "+nama+
+               "\nLokasi     : "+lokasi+
+               "\nBintang    : "+bintang;
+        
     }
     /*
      * metode ini berfungsi untuk mencetak data

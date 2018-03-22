@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Merupakan main class dari package j hotel
  *
@@ -28,10 +28,48 @@ public class JHotel
      */
     public static void main(String[] args)
     {
-        /*Lokasi tempat = new Lokasi(23,45,"Depok");
+        
+        
+     Customer cust = new Customer(12, "luffy", new GregorianCalendar(2018,2,20).getTime());
+     //Pesanan pesan = new   //cust.getDOB();
+        
+        Lokasi tempat = new Lokasi(23,45,"Depok");    
         Hotel rumah = new Hotel("Hotel",tempat,4);
+        Room single = new SingleRoom(rumah,"23",true,StatusKamar.Vacant);
+        Pesanan pesan = new Pesanan(3,cust,single,new GregorianCalendar(2018,2,20).getTime());
+       
+        System.out.println("Customer-----------");
+        System.out.println(cust.toString());
+        System.out.println("Pesanan-----------");
+        System.out.println(pesan.toString());
+        
+        System.out.println("\n\ntoString kelas Room untuk kondisi pertama : \n\n");
+        System.out.println(single.toString());
+        single.setStatusAvailable(false);
+        System.out.println("\n\ntoString kelas Room untuk kondisi kedua   : \n\n");
+        System.out.println(single.toString());
+        
+        pesan.setStatusDiproses(true);
+        pesan.setStatusSelesai(false);
+        
+        System.out.println("\n\ntoString kelas Pesanan untuk kondisi pertama : \n\n");
+        System.out.println(pesan.toString());
+
+        pesan.setStatusDiproses(false);
+        pesan.setStatusSelesai(false);
+
+        System.out.println("\n\ntoString kelas Pesanan untuk kondisi kedua   : \n\n");
+        System.out.println(pesan.toString());
+        
+        pesan.setStatusDiproses(false);
+        pesan.setStatusSelesai(true);
+
+        System.out.println("\n\ntoString kelas Pesanan untuk kondisi ketiga   : \n\n");
+        System.out.println(pesan.toString());
+        
+        /*L;
         Customer customer = new Customer(99,"muflih");
-        Room signle = new SingleRoom(rumah,"23",true,StatusKamar.Vacant);
+        
         Pesanan pesan = new Pesanan(4,customer,signle);
         signle.setDailyTariff(3400);
         System.out.println("----------Pesanan Single--------");
@@ -48,6 +86,7 @@ public class JHotel
         
         System.out.println(signle instanceof SingleRoom);
         Room doble = new DoubleRoom(rumah,"24",true,StatusKamar.Vacant);
+        
         pesan.setJumlahHari(2);
         pesan.setPelanggan(customer);
         pesan.setRoom(doble);

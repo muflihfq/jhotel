@@ -217,7 +217,21 @@ public abstract class Room
     
     public String toString()
     {
-        return null;
+       if(isAvailable)
+       {
+           return "\nNama Hotel   : "+hotel.getNama()+
+                  "\nTipeKamar    : "+getTipeKamar()+
+                  "\nHarga        : "+dailyTariff+
+                  "\nStatus Kamar : "+status_kamar;
+       }
+       else
+       {
+            return "\nNama Hotel   : "+hotel.getNama()+
+                   "\nTipeKamar    : "+getTipeKamar()+
+                   "\nHarga        : "+dailyTariff+
+                   "\nStatus Kamar : "+status_kamar+
+                   "\nPelanggan    : "+pesan.getPelanggan().getNama();
+       }
     }
     /*
      * metode untuk mencetak data

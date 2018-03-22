@@ -1,6 +1,7 @@
 import java.util.Date;
 import java.util.*;
 import java.util.regex.*;
+import java.text.*;
 
 /**
  * Write a description of class Customer here.
@@ -24,10 +25,11 @@ public class Customer
         this.dob = new Date(tahun, bulan, tanggal);
     }
     
-    public Customer(int id, String nama, GregorianCalendar kalender )
+    public Customer(int id, String nama, Date dob )
     {
         this.id = id;
         this.nama = nama;
+        this.dob = dob;
     }
 
     /**
@@ -49,7 +51,7 @@ public class Customer
      */
     public String getNama()
     {
-        return nama;
+       return nama;
     }
     
     public String getEmail()
@@ -59,6 +61,11 @@ public class Customer
     
     public Date getDOB()
     {
+        DateFormat gantiFormat = new SimpleDateFormat("'DOB : 'dd MMMM yyyy");
+        String result = gantiFormat.format(dob);
+        
+        
+        System.out.println(result);
         return dob;
     }
     
@@ -107,7 +114,21 @@ public class Customer
     
     public String toString()
     {
-        return null;
+        if(DatabasePesanan.getPesanan(this)!=null)
+        {
+            return "\nCustomer ID   : "+id+
+                   "\nName          : "+nama+
+                   "\nE-mail        : "+email+
+                   "\nDate of birth : "+dob+
+                   "\nBooking order is in progress";
+        }
+        else
+        {
+            return "\nCustomer ID   : "+id+
+                   "\nName          : "+nama+
+                   "\nE-mail        : "+email+
+                   "\nDate of birth : "+dob;
+        }
     }
     /*
      * metode untuk mencetak data

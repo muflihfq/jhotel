@@ -1,4 +1,8 @@
 import java.util.Date;
+import java.util.*;
+import java.util.regex.*;
+import java.text.*;
+
 /**
  * Class pesanan berikut, berfungsikan untuk melakukan pemesanan
  * dengan memasukkan harga yang dipesan dan pemesannya.
@@ -29,15 +33,26 @@ public class Pesanan
      * @param pelanggan 
      * 
      */
-    public Pesanan(double jumlahHari,Customer pelanggan,Room kamar)
-      
-   {
+    public Pesanan(double jumlahHari,Customer pelanggan,Room kamar,
+                    int hari,int bulan,int tahun)
+    {
       this.jumlahHari = jumlahHari;
       this.pelanggan = pelanggan;
       this.kamar = kamar;
-      biaya = kamar.getDailyTariff() * jumlahHari;
+      this.tanggalPesan = new Date(tahun, bulan,hari);
       
     }
+    
+    public Pesanan(double jumlahHari,Customer pelanggan,Room kamar,Date tanggalPesan)
+    {
+      this.jumlahHari = jumlahHari;
+      this.pelanggan = pelanggan;
+      this.kamar = kamar;
+      this.tanggalPesan = tanggalPesan;
+      
+      
+      biaya = kamar.getDailyTariff() * jumlahHari;
+      }
     
     /**
      * metode untuk menampilkan harga pesanan
@@ -147,7 +162,14 @@ public class Pesanan
      */
     public Date getTanggalPesan()
     {
+        DateFormat gantiFormat = new SimpleDateFormat("'DOB : 'dd MMMM yyyy");
+        String result = gantiFormat.format(tanggalPesan);
+        
+        
+        System.out.println(result);
         return tanggalPesan;
+        
+      
     }
     
     
@@ -264,7 +286,27 @@ public class Pesanan
     
     public String toString()
     {
-        return null ;
+        String final_status = "KOSONG";
+        
+        if(isDiproses == true && isSelesai == false)
+        {
+            final_status = "DIPROSES";
+        }
+        
+        else if (isDiproses == false && isSelesai == true)
+        {
+           final_status = "KOSONG";
+        }
+        
+        else if(isDiproses == false && isSelesai == true)
+        {
+            final_status = "SELESAI";
+        }
+        
+        return "Dibuat oleh " +pelanggan.getNama()+
+                ".Proses booking untuk" +kamar.getHotel()+
+                "kamar nomor "+kamar.getNomorKamar()+
+                ".Status :" +final_status; 
     }
     
     /*
