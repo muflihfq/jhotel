@@ -1,4 +1,4 @@
-
+import java.util.Date;
 /**
  * Class pesanan berikut, berfungsikan untuk melakukan pemesanan
  * dengan memasukkan harga yang dipesan dan pemesannya.
@@ -17,6 +17,7 @@ public class Pesanan
     private boolean isDiproses;
     private boolean isSelesai;
     private Room kamar;
+    private Date tanggalPesan;
    
 
     
@@ -137,6 +138,18 @@ public class Pesanan
         return kamar;
     }
     
+    /**
+     * metode untuk menampilkan kamar
+     *
+     * @return kamar
+     * 
+     * 
+     */
+    public Date getTanggalPesan()
+    {
+        return tanggalPesan;
+    }
+    
     
     /**
      * metode untuk memasukkan harga pesanan
@@ -150,6 +163,7 @@ public class Pesanan
        
        
     }
+    
     
     /**
      * metode untuk memasukkan jumlah hari yang dipesan
@@ -236,11 +250,29 @@ public class Pesanan
     }
     
     /**
+     * metode untuk memasukkan nama pemesan
+     *
+     * @param pelanggan 
+     * pelanggan adalah nama pemesan atau customer
+     * 
+     */
+    public void setTanggalPesan(Date tanggalPesan)
+    {
+       this.tanggalPesan = tanggalPesan;
+       
+    }
+    
+    public String toString()
+    {
+        return null ;
+    }
+    
+    /*
      * metode untuk mencetak data
      *
      * 
      * 
-     */
+     *
     public void printData()
     {
         System.out.println("Nama Pelanggan :" +pelanggan.getNama());
@@ -254,4 +286,5 @@ public class Pesanan
         //System.out.println isDiproses;
         //System.out.println isSelesai;
     }
+    */
 }

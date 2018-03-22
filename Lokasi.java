@@ -87,10 +87,15 @@ public class Lokasi
         deskripsiLokasi = deskripsi;
     }
     
-    /**
+    public String toString()
+    {
+        return null;
+    }
+    
+    /*
      * metode untuk mencetak data
      * 
-     */
+     
     public void printData()
     {
         System.out.println("X koordinat :" +x_coord);
@@ -98,5 +103,6 @@ public class Lokasi
         System.out.println("Deskripsi Lokasi :" +deskripsiLokasi);
         
     }
+    */
     
 }

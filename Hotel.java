@@ -90,11 +90,15 @@ public class Hotel
         this.bintang = bintang;
     }
     
-    /**
+    public String toString()
+    {
+        return null;
+    }
+    /*
      * metode ini berfungsi untuk mencetak data
      *
      * 
-     */
+    
     public void printData()
     {
        System.out.println("Nama Hotel:" +nama);
@@ -102,6 +106,6 @@ public class Hotel
        System.out.println("Bintang :" +bintang);
         
     }
-    
+     */
     
 }

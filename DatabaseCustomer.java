@@ -8,7 +8,7 @@
 public class DatabaseCustomer
 {
     // instance variables - replace the example below with your own
-    private static String[] list_customer;
+    private static Customer list_customer;
 
     /**
      * Constructor untuk class DatabaseCustomer

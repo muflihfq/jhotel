@@ -28,12 +28,12 @@ public class JHotel
      */
     public static void main(String[] args)
     {
-        Lokasi tempat = new Lokasi(23,45,"Depok");
+        /*Lokasi tempat = new Lokasi(23,45,"Depok");
         Hotel rumah = new Hotel("Hotel",tempat,4);
         Customer customer = new Customer(99,"muflih");
-        SingleRoom signle = new SingleRoom(rumah,"23",true,StatusKamar.Vacant);
+        Room signle = new SingleRoom(rumah,"23",true,StatusKamar.Vacant);
         Pesanan pesan = new Pesanan(4,customer,signle);
-        
+        signle.setDailyTariff(3400);
         System.out.println("----------Pesanan Single--------");
         tempat.printData();
         customer.printData();
@@ -47,7 +47,7 @@ public class JHotel
         
         
         System.out.println(signle instanceof SingleRoom);
-        DoubleRoom doble = new DoubleRoom(rumah,"24",true,StatusKamar.Vacant);
+        Room doble = new DoubleRoom(rumah,"24",true,StatusKamar.Vacant);
         pesan.setJumlahHari(2);
         pesan.setPelanggan(customer);
         pesan.setRoom(doble);

@@ -215,20 +215,25 @@ public abstract class Room
         this.pesan = pesan;
     }
     
-    /**
+    public String toString()
+    {
+        return null;
+    }
+    /*
      * metode untuk mencetak data
      * 
-     */
+     
     public void printData()
     {
         System.out.println("Nama Hotel :" +hotel.getNama());
         System.out.println("Nomor Kamar :" +nomor_kamar);
         System.out.println("Status Ketersediaan :" +isAvailable);
-        //System.out.println("Tipe Kamar :"/* +TipeKamar.*/);
+        //System.out.println("Tipe Kamar :"/* +TipeKamar.*);
         System.out.println("Harga Kamar :" +dailyTariff);
         System.out.println("Status Kamar :" +status_kamar);
         
     }
+    */
            
      
     
