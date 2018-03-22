@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=TipeKamar
 comment0.text=\r\n\ Enum\ tipe\ kamar,\ berfungsi\ sebagai\ pilihan\ tipe\ kamar\ yang\ \r\n\ tersedia\ pada\ hotel\ \r\n\ \r\n\ @author\ muflih\ fathan\ q\r\n\ @version\ 03/10/2018\r\n
-comment1.params=tipe
+comment1.params=deskripsi
 comment1.target=TipeKamar(java.lang.String)
 comment2.params=
 comment2.target=java.lang.String\ toString()

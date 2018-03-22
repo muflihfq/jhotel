@@ -23,6 +23,5 @@ comment7.params=bintang
 comment7.target=void\ setBintang(int)
 comment7.text=\r\n\ metode\ ini\ berfungsi\ untuk\ menginput\ kualitas\ hotel\r\n\r\n\ @param\ bintang\ -\ kualitas\ hotel\ (dengan\ angka/jumlah)\r\n
 comment8.params=
-comment8.target=void\ printData()
-comment8.text=\r\n\ metode\ ini\ berfungsi\ untuk\ mencetak\ data\r\n\r\n\ \r\n
+comment8.target=java.lang.String\ toString()
 numComments=9
