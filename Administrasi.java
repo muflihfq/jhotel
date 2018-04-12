@@ -77,6 +77,7 @@ public class Administrasi
         pesan.setStatusSelesai(false);
         pesan.setStatusDiproses(false);
         pesan.setRoom(null);
+        pesan.setStatusAktif(false);
         
         roomLepasPesanan(kamar);
     }
@@ -95,8 +96,9 @@ public class Administrasi
         pesan.setStatusSelesai(true);
         pesan.setStatusDiproses(false);
         pesan.setRoom(null);
-        
-        
+        pesan.setStatusAktif(false);
+
+
         roomLepasPesanan(kamar);
     }
     

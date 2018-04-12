@@ -9,9 +9,6 @@ public class JHotel
 {
     // instance variables - replace the example below with your own
     //private int x;
-   
-    //public
-    
     /**
      * Constructor pada class JHotel
      */
@@ -23,15 +20,16 @@ public class JHotel
     /**
      * metode untuk menjalankan package
      *
-     * @param  String[]
+     * @param  String
      * 
      */
+
     public static void main(String[] args)
     {
         
         
-     Customer cust = new Customer(12, "luffy", new GregorianCalendar(2018,2,20).getTime());
-     //Pesanan pesan = new   //cust.getDOB();
+        Customer cust = new Customer(12, "luffy", new GregorianCalendar(2018,2,20).getTime());
+        //Pesanan pesan = new   //cust.getDOB();
         
         Lokasi tempat = new Lokasi(23,45,"Depok");    
         Hotel rumah = new Hotel("Hotel",tempat,4);
@@ -66,7 +64,8 @@ public class JHotel
 
         System.out.println("\n\ntoString kelas Pesanan untuk kondisi ketiga   : \n\n");
         System.out.println(pesan.toString());
-        
+
+        System.out.println("tes");
         /*L;
         Customer customer = new Customer(99,"muflih");
         

@@ -12,7 +12,7 @@ public abstract class Room
     private Hotel hotel;
     //private int id;
     private String nomor_kamar;
-    private boolean isAvailable;
+    //private boolean isAvailable;
     //private Customer customer;
     public double dailyTariff;
     private StatusKamar status_kamar;
@@ -23,11 +23,11 @@ public abstract class Room
      * Constructor for objects of class Room
      */
     public Room(Hotel hotel, String nomor_kamar,
-                boolean isAvailable, StatusKamar status_kamar)
+                 StatusKamar status_kamar)
     {
         this.hotel = hotel;
         this.nomor_kamar = nomor_kamar;
-        this.isAvailable = isAvailable;
+        //this.isAvailable = isAvailable;
         //this.customer = customer;
         this.dailyTariff = dailyTariff;
         this.status_kamar = status_kamar;
@@ -74,10 +74,10 @@ public abstract class Room
      * 
      * @return isAvailable status ketersediaan kamar
      */
-    public boolean getStatusAvailable()
+  /*  public boolean getStatusAvailable()
     {
         return isAvailable;
-    }
+    }*/
     
     /*/**
      * Metode untuk mengambil nama atau informasi terkait pemesan
@@ -165,12 +165,12 @@ public abstract class Room
      * Metode untuk memasukkan status ketersediaan kamar
      * pada hotel
      * 
-     * @param isAvailable status ketersediaan kamar
+     * @param  status ketersediaan kamar
      */
-    public void setStatusAvailable(boolean isAvailable)
+    /*public void setStatusAvailable(boolean isAvailable)
     {
         this.isAvailable = isAvailable;
-    }
+    }*/
     
     /*
      * Metode untuk memasukkan informasi terkait customerr
@@ -217,7 +217,9 @@ public abstract class Room
     
     public String toString()
     {
-       if(isAvailable)
+        return null;
+    }
+      /* if(isAvailable)
        {
            return "\nNama Hotel   : "+hotel.getNama()+
                   "\nTipeKamar    : "+getTipeKamar()+
@@ -233,6 +235,7 @@ public abstract class Room
                    "\nPelanggan    : "+pesan.getPelanggan().getNama();
        }
     }
+    */
     /*
      * metode untuk mencetak data
      * 

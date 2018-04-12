@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=DatabaseCustomer
+comment0.text=\r\n\ Class\ untuk\ menyimpan\ database\ customer\r\n\r\n\ @author\ muflih\ fathan\ q\r\n\ @version\ 03/10/2018\r\n
+comment1.params=
+comment1.target=DatabaseCustomer()
+comment1.text=\r\n\ Constructor\ untuk\ class\ DatabaseCustomer\r\n
+comment2.params=baru
+comment2.target=boolean\ addCustomer(Customer)
+comment2.text=\r\n\ metode\ untuk\ menambahkan\ customer\r\n\r\n\ @param\ baru\ -\ baru\ merupakan\ variabel\ untuk\ customer\ baru\r\n\ \r\n
+comment3.params=id
+comment3.target=boolean\ removeCustomer(int)
+comment3.text=\r\n\ metode\ untuk\ menghapus\ pesanan\ ke\ database\r\n\r\n\ @param\ \ id\ id\ customer\r\n\ \r\n
+comment4.params=
+comment4.target=java.lang.String\ getCustomerDatabase()
+comment4.text=\r\n\ metode\ untuk\ mengambil\ data\ customer\ dari\ database\r\n\r\n\ \r\n\ \r\n
+numComments=5

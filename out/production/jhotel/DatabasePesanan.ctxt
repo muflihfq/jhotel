@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=DatabasePesanan
+comment0.text=\r\n\ class\ ini\ berfungsi\ sebagai\ database\r\n\ atau\ penyimpanan\ data\ terkait\ pemesanan\r\n\r\n\ @author\ muflih\ fathan\ q\r\n\ @version\ 03/10/2018\r\n
+comment1.params=
+comment1.target=DatabasePesanan()
+comment1.text=\r\n\ Constructor\ untuk\ objek\ pada\ class\ DatabasePesanan\r\n
+comment2.params=baru
+comment2.target=boolean\ addPesanan(Pesanan)
+comment2.text=\r\n\ metode\ untuk\ menambah\ pesanan\ ke\ database\r\n\r\n\ @param\ \ baru\r\n\ \r\n
+comment3.params=pesan
+comment3.target=boolean\ removePesanan(Pesanan)
+comment3.text=\r\n\ metode\ untuk\ menghapus\ pesanan\ ke\ database\r\n\r\n\ @param\ \ pesan\r\n\ \r\n
+comment4.params=cust
+comment4.target=Pesanan\ getPesanan(Customer)
+comment4.text=\r\n\ metode\ untuk\ mengambil\ data\ pesanan\r\n\r\n\ @param\ Customer\r\n\ \r\n
+comment5.params=
+comment5.target=java.lang.String\ getPesananDatabase()
+comment5.text=\r\n\ metode\ untuk\ mengambil\ data\ pesanan\ dari\ database\r\n\r\n\ \r\n\ \r\n
+comment6.params=pesan
+comment6.target=void\ pesananDibatalkan(Pesanan)
+comment6.text=\r\n\ metode\ untuk\ menambah\ pesanan\ ke\ database\r\n\r\n\ @param\ \ pesan\r\n\ \r\n
+numComments=7

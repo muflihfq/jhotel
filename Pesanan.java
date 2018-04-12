@@ -13,9 +13,11 @@ import java.text.*;
 public class Pesanan
 {
     // instance variables - replace the example below with your own
+    private int id;
     private double biaya;
     private double jumlahHari;
     private Customer pelanggan;
+    private boolean isAktif;
     //private String nama_pelanggan;
     //private TipeKamar tipe_kamar;
     private boolean isDiproses;
@@ -33,32 +35,38 @@ public class Pesanan
      * @param pelanggan 
      * 
      */
-    public Pesanan(double jumlahHari,Customer pelanggan,Room kamar,
-                    int hari,int bulan,int tahun)
+    public Pesanan(double jumlahHari,Customer pelanggan)
     {
       this.jumlahHari = jumlahHari;
       this.pelanggan = pelanggan;
-      this.kamar = kamar;
-      this.tanggalPesan = new Date(tahun, bulan,hari);
+      isAktif = true;
+      tanggalPesan = new Date();
+
+      //this.kamar = kamar;
+      //this.tanggalPesan = new Date(tahun, bulan,hari);
       
     }
     
-    public Pesanan(double jumlahHari,Customer pelanggan,Room kamar,Date tanggalPesan)
-    {
-      this.jumlahHari = jumlahHari;
-      this.pelanggan = pelanggan;
-      this.kamar = kamar;
-      this.tanggalPesan = tanggalPesan;
-      
-      
-      biaya = kamar.getDailyTariff() * jumlahHari;
-      }
+//    public Pesanan(double jumlahHari,Customer pelanggan,Room kamar,Date tanggalPesan)
+//    {
+//      this.jumlahHari = jumlahHari;
+//      this.pelanggan = pelanggan;
+//      this.kamar = kamar;
+//      this.tanggalPesan = tanggalPesan;
+//
+//
+//      biaya = kamar.getDailyTariff() * jumlahHari;
+//      }
     
     /**
      * metode untuk menampilkan harga pesanan
      * @return biaya - biaya adalah harga 
      * 
      */
+    public int getID()
+    {
+        return id;
+    }
     public double getBiaya()
     
     {
@@ -89,7 +97,11 @@ public class Pesanan
         return pelanggan;
     
     }
-    
+
+    public boolean getStatusAktif()
+    {
+        return isAktif;
+    }
     
     /*
      * metode untuk menampilkan nama pelanggan
@@ -171,7 +183,11 @@ public class Pesanan
         
       
     }
-    
+
+    public void setID(int id)
+    {
+        this.id = id;
+    }
     
     /**
      * metode untuk memasukkan harga pesanan
@@ -210,6 +226,11 @@ public class Pesanan
        this.pelanggan = pelanggan;
     }
     
+
+    public void setStatusAktif(boolean aktif)
+    {
+        isAktif = aktif;
+    }
     /*
      * metode untuk memasukkan nama pelanggan
      * 
