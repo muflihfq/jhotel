@@ -60,10 +60,26 @@ public class DatabasePesanan
      * @param  pesan
      * 
      */
-    public static boolean removePesanan(Pesanan pesan)
-    {
+    public static boolean removeRoom(Pesanan pesan) {
+        for (Pesanan p : PESANAN_DATABASE) {
+            if (p.equals(pesan)) {
+                if (p.getRoom() != null) {
+                    Administrasi.pesananDibatalkan(p);
+                } else {
+                    if (p.getStatusAktif()) {
+                        p.setStatusAktif(false);
+                    }
+                }
+            }
+
+            if (PESANAN_DATABASE.remove(p)) {
+                return true;
+            }
+        }
         return false;
     }
+
+
     
     /**
      * metode untuk mengambil data pesanan
@@ -73,29 +89,43 @@ public class DatabasePesanan
      */
     public static Pesanan getPesanan(int id)
     {
-
+        Pesanan balik = null;
 
            for( int i = 0; i < PESANAN_DATABASE.size();i++)
            {
                if(PESANAN_DATABASE.get(i).getID() == id)
                 {
-                    return PESANAN_DATABASE.get(id);
+                    balik = PESANAN_DATABASE.get(i);
 
                 }
                 else
                 {
-                    return null;
+                    balik = null;
                 }
            }
 
 
-        return null;
+           return balik;
     }
 
     public static Pesanan getPesanan(Room kamar)
     {
-        return null;
+        Pesanan balik = null;
+        for( int i = 0; i < PESANAN_DATABASE.size();i++)
+        {
+            if(PESANAN_DATABASE.get(i).getRoom() == kamar)
+            {
+                balik = PESANAN_DATABASE.get(i);
+
+            }
+            else
+            {
+                balik = null;
+            }
+        }
+    return balik;
     }
+
     /**
      * metode untuk mengambil data pesanan dari database
      *
@@ -105,7 +135,21 @@ public class DatabasePesanan
     
     public static Pesanan getPesananAktif(Customer pelanggan)
     {
-        return null;
+        Pesanan balik = null;
+        for( int i = 0; i < PESANAN_DATABASE.size();i++)
+        {
+            if(PESANAN_DATABASE.get(i).getStatusAktif() == true)
+            {
+                balik = PESANAN_DATABASE.get(i);
+
+            }
+            else
+            {
+                balik = null;
+            }
+        }
+    return balik;
+
     }
     
     /**
