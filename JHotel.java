@@ -20,30 +20,39 @@ public class JHotel
     /**
      * metode untuk menjalankan package
      *
-     * @param  String
+     * @param
      * 
      */
 
     public static void main(String[] args)
     {
         
-        
-        Customer cust = new Customer(12, "luffy", new GregorianCalendar(2018,2,20).getTime());
-        //Pesanan pesan = new   //cust.getDOB();
-        
+        DatabaseCustomer dbCus = new DatabaseCustomer();
+        Customer luffy = new Customer("luffy", new GregorianCalendar(2018,2,20).getTime());
+        dbCus.addCustomer(luffy);
+
+
+        DatabaseHotel dbHotel = new DatabaseHotel();
+        DatabaseRoom dbRoom = new DatabaseRoom();
         Lokasi tempat = new Lokasi(23,45,"Depok");    
         Hotel rumah = new Hotel("Hotel",tempat,4);
+        dbHotel.addHotel(rumah);
         Room single = new SingleRoom(rumah,"23",true,StatusKamar.Vacant);
-        Pesanan pesan = new Pesanan(3,cust,single,new GregorianCalendar(2018,2,20).getTime());
-       
+        dbRoom.addRoom(single);
+
+        DatabasePesanan dbPesan = new DatabasePesanan();
+        Pesanan pesan = new Pesanan(3,luffy);
+        dbPesan.addPesanan(pesan);
+
+
         System.out.println("Customer-----------");
-        System.out.println(cust.toString());
+        System.out.println(luffy.toString());
         System.out.println("Pesanan-----------");
         System.out.println(pesan.toString());
         
         System.out.println("\n\ntoString kelas Room untuk kondisi pertama : \n\n");
         System.out.println(single.toString());
-        single.setStatusAvailable(false);
+
         System.out.println("\n\ntoString kelas Room untuk kondisi kedua   : \n\n");
         System.out.println(single.toString());
         

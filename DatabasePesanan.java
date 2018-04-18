@@ -12,7 +12,7 @@ public class DatabasePesanan
 {
     // instance variables - replace the example below with your own
     //private static Pesanan list_pesanan;
-    private static ArrayList<Pesanan> PESANAN_DATABASE;
+    private static ArrayList<Pesanan> PESANAN_DATABASE = new ArrayList<Pesanan>();
     private static int LAST_PESANAN_ID = 0;
 
     /**

@@ -20,7 +20,7 @@ public class Customer
     /**
      * Constructor for objects of class Customer
      */
-    public Customer(int tahun, int bulan, int tanggal)
+    public Customer(String nama, int tahun, int bulan, int tanggal)
     {
         DatabaseCustomer db = new DatabaseCustomer();
         id = db.getLastCustomerID() + 1;
@@ -122,7 +122,9 @@ public class Customer
         {
             if(id == c.getID())
             {
-                if(DatabasePesanan.getPesananAktif(c).equals(true))
+                Pesanan p = DatabasePesanan.getPesa;
+
+                if
                 {
                     return "\nCustomer ID   : "+id+
                             "\nName          : "+nama+

@@ -11,7 +11,7 @@ public class DatabaseRoom
 {
     // instance variables - replace the example below with your own
     // private static String[] list_room;
-    private static ArrayList<Room> ROOM_DATABASE;
+    private static ArrayList<Room> ROOM_DATABASE = new ArrayList<Room>();
 
 
     /**

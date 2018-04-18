@@ -17,7 +17,7 @@ public class PremiumRoom extends Room
     public PremiumRoom(Hotel hotel, String nomor_kamar,
                 boolean isAvailable, StatusKamar status_kamar)
     {
-        super(hotel,nomor_kamar,isAvailable,status_kamar);
+        super(hotel,nomor_kamar,status_kamar);
         
     }   
 

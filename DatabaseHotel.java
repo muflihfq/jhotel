@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class DatabaseHotel
 {
     // instance variables - replace the example below with your own
-    private static ArrayList<Hotel> HOTEL_DATABASE;
+    private static ArrayList<Hotel> HOTEL_DATABASE = new ArrayList<Hotel>();
     private static int LAST_HOTEL_ID;
 
     /**

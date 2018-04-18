@@ -10,7 +10,8 @@ public class DatabaseCustomer
 {
     // instance variables - replace the example below with your own
     private static int LAST_CUSTOMER_ID;
-    private static ArrayList<Customer> CUSTOMER_DATABASE;
+    private static ArrayList<Customer> CUSTOMER_DATABASE = new ArrayList<Customer>();
+
 
     /**
      * Constructor untuk class DatabaseCustomer
@@ -28,9 +29,12 @@ public class DatabaseCustomer
      */
     public static boolean addCustomer(Customer baru)
     {
-        for(Customer c : CUSTOMER_DATABASE)
+        //System.out.println(baru);
+
+        for(int i = 0; i < CUSTOMER_DATABASE.size();i++)
         {
-            if(c.getID() == baru.getID())
+            Customer id = CUSTOMER_DATABASE.get(i);
+            if(id.getID() == baru.getID())
             {
                 return false;
             }

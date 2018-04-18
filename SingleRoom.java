@@ -2,7 +2,7 @@
 /**
  * Write a description of class SingleRoom here.
  *
- * @author 
+ e* @author
  * @version (a version number or a date)
  */
 public class SingleRoom extends Room
@@ -17,7 +17,7 @@ public class SingleRoom extends Room
                 boolean isAvailable, StatusKamar status_kamar)
     {
         // initialise instance variables
-        super(hotel,nomor_kamar,isAvailable,status_kamar);
+        super(hotel,nomor_kamar,status_kamar);
    
     }
 
