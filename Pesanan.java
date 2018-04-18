@@ -284,7 +284,7 @@ public class Pesanan
     /**
      * metode untuk memasukkan nama pelanggan
      *
-     * @param nama - nama adalah nama pelanggan
+     *
      * 
      */
     
@@ -316,7 +316,7 @@ public class Pesanan
             final_status = "DIPROSES";
         }
         
-        else if (isDiproses == false && isSelesai == true)
+        else if (isDiproses == false && isSelesai == false)
         {
            final_status = "KOSONG";
         }
@@ -325,11 +325,22 @@ public class Pesanan
         {
             final_status = "SELESAI";
         }
-        
-        return "Dibuat oleh " +pelanggan.getNama()+
-                ".Proses booking untuk" +kamar.getHotel()+
-                "kamar nomor "+kamar.getNomorKamar()+
-                ".Status :" +final_status; 
+
+
+        if(kamar == null)
+        {
+            return "\nDibuat oleh " + pelanggan.getNama() +
+                    " Status :" + final_status;
+        }
+        else
+        {
+            return "\nDibuat oleh " + pelanggan.getNama() +
+                    " Status :" + final_status+
+                    "\nNama Hotel :"+kamar.getHotel().getNama()+
+                    "\nTipe Kamar :"+kamar.getTipeKamar()+
+                    "\nNomor Kamar :"+kamar.getNomorKamar()+
+                    "\nJumlah Hari :"+jumlahHari;
+        }
     }
     
     /*

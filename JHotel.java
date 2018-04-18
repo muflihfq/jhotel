@@ -1,3 +1,5 @@
+import javax.xml.crypto.Data;
+import java.rmi.server.LogStream;
 import java.util.*;
 /**
  * Merupakan main class dari package j hotel
@@ -24,9 +26,131 @@ public class JHotel
      * 
      */
 
-    public static void main(String[] args)
-    {
-        
+    public static void main(String[] args) {
+        DatabaseCustomer.addCustomer(new Customer("abi", 1997, 3, 12));
+        DatabaseCustomer.addCustomer(new Customer("budi", 1997, 4, 23));
+        DatabaseCustomer.addCustomer(new Customer("cece", 1997, 5, 10));
+        ArrayList<Customer> Cust = new DatabaseCustomer().getCustomerDatabase();
+        for (Customer c : Cust) {
+            System.out.println(c);
+        }
+
+        Lokasi Depok = new Lokasi(23, 32, "Depok");
+        DatabaseHotel.addHotel(new Hotel("Aston", Depok, 4));
+
+        Lokasi Bogor = new Lokasi(56, 89, "Bogot");
+        DatabaseHotel.addHotel(new Hotel("Hilton", Bogor, 5));
+
+        Lokasi Jakarta = new Lokasi(1, 1, "Jakarta");
+        DatabaseHotel.addHotel(new Hotel("Ibis", Jakarta, 3));
+
+        ArrayList<Hotel> Hotel = new DatabaseHotel().getHotelDatabase();
+        for (Hotel h : Hotel) {
+            System.out.println(h);
+        }
+
+        ArrayList<Hotel> hotel = DatabaseHotel.getHotelDatabase();
+        for (Hotel h : hotel) {
+            if (h.getNama().equals("Hilton")) {
+                DatabaseRoom.addRoom(new DoubleRoom(h, "E202", StatusKamar.Vacant));
+            } else if (h.getNama().equals("Aston")) {
+                DatabaseRoom.addRoom(new PremiumRoom(h, "C303", StatusKamar.Vacant));
+            } else if (h.getNama().equals("Ibis")) {
+                DatabaseRoom.addRoom(new SingleRoom(h, "A101", StatusKamar.Vacant));
+                DatabaseRoom.addRoom(new PremiumRoom(h, "D404", StatusKamar.Vacant));
+            }
+
+        }
+
+        ArrayList<Room> room = DatabaseRoom.getRoomDatabase();
+
+        for (Room r : room) {
+            System.out.println(r);
+        }
+
+        ArrayList<Customer> customer = DatabaseCustomer.getCustomerDatabase();
+        Administrasi admin = new Administrasi();
+        for (Customer c : customer) {
+            if (c.getNama().equals("abi")) {
+                DatabasePesanan.addPesanan(new Pesanan(12, c));
+
+            } else if (c.getNama().equals("budi")) {
+                DatabasePesanan.addPesanan(new Pesanan(3, c));
+            } else if (c.getNama().equals("cece")) {
+                DatabasePesanan.addPesanan(new Pesanan(7, c));
+            }
+
+
+        }
+
+       /* ArrayList<Pesanan> pesan = DatabasePesanan.getPesananDatabase();
+        for (Pesanan p : pesan)
+        {
+            System.out.println(p);
+        }*/
+
+        ArrayList<Pesanan> pesan1 = DatabasePesanan.getPesananDatabase();
+        ArrayList<Room> room1 = DatabaseRoom.getRoomDatabase();
+
+        for (Pesanan p : pesan1) {
+            if (p.getID() == 1) {
+                for (Room r : room1) {
+                    if (r.getNomorKamar().equals("A101")) {
+                        admin.pesananDitugaskan(p, r);
+                    }
+                }
+            } else if (p.getID() == 2) {
+                for (Room r : room1) {
+                    if (r.getNomorKamar().equals("E202")) {
+                        admin.pesananDitugaskan(p, r);
+                    }
+                }
+            } else if (p.getID() == 3) {
+                for (Room r : room1) {
+                    if (r.getNomorKamar().equals("C303")) {
+                        admin.pesananDitugaskan(p, r);
+                    }
+                }
+            }
+
+
+            System.out.println(p);
+
+        }
+        /*
+            ArrayList<Pesanan> pesan2 = DatabasePesanan.getPesananDatabase();
+
+
+            for (Pesanan p : pesan2) {
+                if (p.getID() == 1) {
+                    admin.pesananSelesai(p);
+                } else if (p.getID() == 2) {
+                    admin.pesananDibatalkan(p);
+                } else if (p.getID() == 3) {
+                    admin.pesananDibatalkan(p);
+                }
+                System.out.println(p);
+            }*/
+
+
+        admin.pesananSelesai(DatabasePesanan.getPesanan(1));
+        admin.pesananDibatalkan(DatabasePesanan.getPesanan(2));
+
+        /*Pesanan psn = DatabasePesanan.getPesanan(3);
+        System.out.println("\n\n\n\n\n\n\n\n");
+        System.out.println(psn);*/
+
+
+        ArrayList<Pesanan> pesan2 = DatabasePesanan.getPesananDatabase();
+        for(Pesanan p : pesan2)
+        {
+            System.out.println(p);
+        }
+        }
+    }
+
+        //DatabaseRoom.addRoom(new Room())
+        /*
         DatabaseCustomer dbCus = new DatabaseCustomer();
         Customer luffy = new Customer("luffy", new GregorianCalendar(2018,2,20).getTime());
         dbCus.addCustomer(luffy);
@@ -75,117 +199,6 @@ public class JHotel
         System.out.println(pesan.toString());
 
         System.out.println("tes");
-        /*L;
-        Customer customer = new Customer(99,"muflih");
-        
-        Pesanan pesan = new Pesanan(4,customer,signle);
-        signle.setDailyTariff(3400);
-        System.out.println("----------Pesanan Single--------");
-        tempat.printData();
-        customer.printData();
-        rumah.printData();
-        
-        System.out.println("Hasil Pesananan");
-        Administrasi method1 = new Administrasi();
-        method1.pesananDitugaskan(pesan,signle);
-        pesan.printData();
-        signle.printData();
-        
-        
-        System.out.println(signle instanceof SingleRoom);
-        Room doble = new DoubleRoom(rumah,"24",true,StatusKamar.Vacant);
-        
-        pesan.setJumlahHari(2);
-        pesan.setPelanggan(customer);
-        pesan.setRoom(doble);
-        
-        System.out.println("----------Pesanan Double--------");
-        
-        tempat.printData();
-        customer.printData();
-        rumah.printData();
-        
-        Administrasi method2 = new Administrasi();
-        method2.pesananDitugaskan(pesan,doble);
-        System.out.println("Hasil Pesananan");
-        pesan.printData();
-        doble.printData();
-        System.out.println(doble instanceof DoubleRoom);
-        
-        /*
-         * 
-         Customer customer = new Customer(99,"muflih");
-        Pesanan pesan = new Pesanan(10000,customer);
-        Lokasi tempat = new Lokasi(23,45,"Depok");
-        pesan.setTipeKamar(TipeKamar.Single);
-        
-        Hotel hotel = new Hotel("Hotel",tempat,4);
-        StatusKamar status = StatusKamar.Vacant;
-        
-        Room kamar = new Room(hotel,"131",true,customer,100,
-                             status);
-                
-        tempat.printData();
-        customer.printData();
-        hotel.printData();
-        
-        
-        System.out.println("-----------------------------");
-        System.out.println("Pesanan Ditugaskan");
-        
-        //method 1 pesanan ditugaskan
-        Administrasi method1 = new Administrasi();
-        method1.pesananDitugaskan(pesan,kamar);
-        
-        System.out.println("Room");
-        kamar.printData();
-        System.out.println("Pesanan");
-        pesan.printData();
-        
-        System.out.println("-----------------------------");
-        System.out.println("Pesanan Dibatalkan");
-        
-        //method 2 pesanan dibatalkan
-        method1.pesananDibatalkan(kamar);
-        System.out.println("Room");
-        kamar.printData();
-        System.out.println("Pesanan");
-        pesan.printData();
-        method1.pesananDitugaskan(pesan,kamar);
-        
-        
-        System.out.println("-----------------------------");
-        System.out.println("Pesanan Selesai");
-        
-        //method 3 pesanan selesai
-        method1.pesananSelesai(kamar);
-        System.out.println("Room");
-        kamar.printData();
-        System.out.println("Pesanan");
-        pesan.printData();
-        method1.pesananDitugaskan(pesan,kamar);
-        
-        System.out.println("-----------------------------");
-        System.out.println("Pesanan Dibatalkan");
-        //method 4 pesanan dibatalkan
-        method1.pesananDibatalkan(pesan);
-        System.out.println("Room");
-        kamar.printData();
-        System.out.println("Pesanan");
-        pesan.printData();
-        method1.pesananDitugaskan(pesan,kamar);
-        
-        System.out.println("-----------------------------");
-        System.out.println("Pesanan Selesai");
-        //method 5 pesanan selesai
-        method1.pesananSelesai(pesan);
-        System.out.println("Room");
-        kamar.printData();
-        System.out.println("Pesanan");
-        pesan.printData();
-        method1.pesananDitugaskan(pesan,kamar);
-        
         */
-        
-    }
-}
+
+

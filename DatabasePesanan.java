@@ -40,18 +40,19 @@ public class DatabasePesanan
      */
     public static boolean addPesanan(Pesanan baru)
     {
-        boolean balik;
 
-        if(baru.getStatusAktif()) {
-            System.out.println("Pesanan tidak dapat diproses");
-            balik = false;
-        }
-        else
+        for(Pesanan p : PESANAN_DATABASE )
         {
-            PESANAN_DATABASE.add(baru);
-            balik = true;
+            if(p.getPelanggan().equals(baru.getPelanggan()) && baru.getStatusAktif() == true)
+            {
+                System.out.println("Pesanan tidak dapat diproses");
+                return false;
+            }
+
         }
-        return balik;
+        PESANAN_DATABASE.add(baru);
+        LAST_PESANAN_ID = baru.getID();
+        return true;
     }
     
     /**
@@ -89,23 +90,18 @@ public class DatabasePesanan
      */
     public static Pesanan getPesanan(int id)
     {
-        Pesanan balik = null;
-
-           for( int i = 0; i < PESANAN_DATABASE.size();i++)
-           {
-               if(PESANAN_DATABASE.get(i).getID() == id)
-                {
-                    balik = PESANAN_DATABASE.get(i);
-
-                }
-                else
-                {
-                    balik = null;
-                }
-           }
 
 
-           return balik;
+        for(Pesanan p : PESANAN_DATABASE)
+        {
+            if(p.getID() == id)
+            {
+                return p;
+            }
+        }
+        return null;
+
+
     }
 
     public static Pesanan getPesanan(Room kamar)

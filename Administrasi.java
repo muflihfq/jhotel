@@ -110,8 +110,8 @@ public class Administrasi
     public static void pesananDibatalkan(Pesanan pesan)
     {
         roomLepasPesanan(pesan.getRoom());
-        
-        pesan.setStatusSelesai(true);
+
+        pesan.setStatusSelesai(false);
         pesan.setStatusDiproses(false);
         pesan.setRoom(null);
     }
@@ -125,8 +125,8 @@ public class Administrasi
     public static void pesananSelesai(Pesanan pesan)
     {
         roomLepasPesanan(pesan.getRoom());
-        
-        pesan.setStatusSelesai(true);
+//      pesan.getRoom().setStatusKamar(StatusKamar.Vacant);
+       pesan.setStatusSelesai(true);
         pesan.setStatusDiproses(false);
         pesan.setRoom(null);
         

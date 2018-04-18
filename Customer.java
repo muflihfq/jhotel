@@ -25,6 +25,7 @@ public class Customer
         DatabaseCustomer db = new DatabaseCustomer();
         id = db.getLastCustomerID() + 1;
         this.dob = new Date(tahun, bulan, tanggal);
+        this.nama = nama;
     }
     
     public Customer(String nama, Date dob )
@@ -122,16 +123,16 @@ public class Customer
         {
             if(id == c.getID())
             {
-                Pesanan p = DatabasePesanan.getPesa;
+                //Pesanan p = DatabasePesanan.getPesa;
 
-                if
-                {
+
+
                     return "\nCustomer ID   : "+id+
                             "\nName          : "+nama+
                             "\nE-mail        : "+email+
                             "\nDate of birth : "+dob+
                             "\nBooking order is in progress";
-                }
+
             }
         }
 
