@@ -22,11 +22,11 @@ public class DatabasePesanan
     {
         
     }
-/*
-    public static ArrayList<Pesanan> getPesananDatabase();
+
+    public static ArrayList<Pesanan> getPesananDatabase()
     {
-        return null;
-    }*/
+        return PESANAN_DATABASE;
+    }
 
     public static int getLastPesananID()
     {
@@ -60,7 +60,7 @@ public class DatabasePesanan
      * @param  pesan
      * 
      */
-    public static boolean removeRoom(Pesanan pesan) {
+    public static boolean removePesanan(Pesanan pesan) {
         for (Pesanan p : PESANAN_DATABASE) {
             if (p.equals(pesan)) {
                 if (p.getRoom() != null) {
@@ -111,6 +111,7 @@ public class DatabasePesanan
     public static Pesanan getPesanan(Room kamar)
     {
         Pesanan balik = null;
+
         for( int i = 0; i < PESANAN_DATABASE.size();i++)
         {
             if(PESANAN_DATABASE.get(i).getRoom() == kamar)

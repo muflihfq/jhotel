@@ -22,12 +22,15 @@ public class Customer
      */
     public Customer(int tahun, int bulan, int tanggal)
     {
+        DatabaseCustomer db = new DatabaseCustomer();
+        id = db.getLastCustomerID() + 1;
         this.dob = new Date(tahun, bulan, tanggal);
     }
     
-    public Customer(int id, String nama, Date dob )
+    public Customer(String nama, Date dob )
     {
-        this.id = id;
+        DatabaseCustomer db = new DatabaseCustomer();
+        id = db.getLastCustomerID() + 1;
         this.nama = nama;
         this.dob = dob;
     }
@@ -114,21 +117,28 @@ public class Customer
     
     public String toString()
     {
-        if(DatabasePesanan.getPesanan(this)!=null)
+        ArrayList<Customer> CUSTOMER = DatabaseCustomer.getCustomerDatabase();
+        for(Customer c : CUSTOMER)
         {
-            return "\nCustomer ID   : "+id+
-                   "\nName          : "+nama+
-                   "\nE-mail        : "+email+
-                   "\nDate of birth : "+dob+
-                   "\nBooking order is in progress";
+            if(id == c.getID())
+            {
+                if(DatabasePesanan.getPesananAktif(c).equals(true))
+                {
+                    return "\nCustomer ID   : "+id+
+                            "\nName          : "+nama+
+                            "\nE-mail        : "+email+
+                            "\nDate of birth : "+dob+
+                            "\nBooking order is in progress";
+                }
+            }
         }
-        else
-        {
+
+
             return "\nCustomer ID   : "+id+
                    "\nName          : "+nama+
                    "\nE-mail        : "+email+
                    "\nDate of birth : "+dob;
-        }
+
     }
     /*
      * metode untuk mencetak data

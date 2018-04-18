@@ -12,6 +12,7 @@ public class Hotel
     private String nama;
     private Lokasi lokasi;
     private int bintang;
+    private int id;
 
     /**
      * konstruktor pada class hotel
@@ -19,11 +20,17 @@ public class Hotel
      */
     public Hotel(String nama, Lokasi lokasi, int bintang)
     {
+        DatabaseHotel db = new DatabaseHotel();
         this.nama = nama;
         this.lokasi = lokasi;
         this.bintang = bintang;
+        id = db.getLastHotelID() + 1;
     }
 
+    public int getID()
+    {
+        return id;
+    }
     /**
      * metode ini berfungsi untuk mengambil nilai/data
      * terkait kualitas hotel (dengan skala bintang)
@@ -62,8 +69,13 @@ public class Hotel
     /**
      * metode ini berfungsi untuk menginput nama hotel
      *
-     * @param nama - nama hotel
+     *
      */
+    public void setID(int id)
+    {
+        this.id = id;
+    }
+
     public void setNama(String nama)
     {
         this.nama = nama;

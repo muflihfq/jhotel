@@ -41,6 +41,8 @@ public class Pesanan
       this.pelanggan = pelanggan;
       isAktif = true;
       tanggalPesan = new Date();
+      DatabasePesanan db = new DatabasePesanan();
+      id = db.getLastPesananID() + 1;
 
       //this.kamar = kamar;
       //this.tanggalPesan = new Date(tahun, bulan,hari);

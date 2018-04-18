@@ -16,7 +16,7 @@ public abstract class Room
     //private Customer customer;
     public double dailyTariff;
     private StatusKamar status_kamar;
-    private Pesanan pesan;
+    //private Pesanan pesan;
     
 
     /**
@@ -30,7 +30,7 @@ public abstract class Room
         //this.isAvailable = isAvailable;
         //this.customer = customer;
         this.dailyTariff = dailyTariff;
-        this.status_kamar = status_kamar;
+        this.status_kamar = StatusKamar.Vacant;
         
     }
 
@@ -118,11 +118,7 @@ public abstract class Room
      * 
      * @return pesan info terkait pesanan
      */
-    public Pesanan getPesanan()
-    {
-        return pesan;
-        
-    }
+
     
     public abstract TipeKamar getTipeKamar();
     
@@ -204,22 +200,13 @@ public abstract class Room
        this.status_kamar = status_kamar;
     }
     
-    /**
-     * Metode untuk memasukkan pesanan yang dipesan.
-     * 
-     * @param pesan info terkait pesanan yang dipesan oleh 
-     * customer
-     */
-    public void setPesanan(Pesanan pesan)
-    {
-        this.pesan = pesan;
-    }
+
+
     
     public String toString()
     {
-        return null;
-    }
-      /* if(isAvailable)
+        //DatabasePesanan.getPesanan(kamar);
+        if(true)
        {
            return "\nNama Hotel   : "+hotel.getNama()+
                   "\nTipeKamar    : "+getTipeKamar()+
@@ -232,10 +219,10 @@ public abstract class Room
                    "\nTipeKamar    : "+getTipeKamar()+
                    "\nHarga        : "+dailyTariff+
                    "\nStatus Kamar : "+status_kamar+
-                   "\nPelanggan    : "+pesan.getPelanggan().getNama();
+                   "\nPelanggan    : ";
        }
     }
-    */
+
     /*
      * metode untuk mencetak data
      * 
