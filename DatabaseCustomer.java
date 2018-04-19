@@ -72,7 +72,10 @@ public class DatabaseCustomer
         int i = 0;
         try {
 
-
+            if(id > CUSTOMER_DATABASE.size())
+            {
+                throw new PelangganTidakDitemukanException(id);
+            }
             while (CUSTOMER_DATABASE.size() > i) {
                 i++;
                 if(i == CUSTOMER_DATABASE.size()) {

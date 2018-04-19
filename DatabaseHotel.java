@@ -81,11 +81,14 @@ public class DatabaseHotel
      * 
      */
 
-    public static boolean removeHotel(int id) throws RoomTidakDitemukanException
+    public static boolean removeHotel(int id) throws HotelTidakDitemukanException
     {
         int i = 0;
         try {
-
+            if(id > HOTEL_DATABASE.size())
+            {
+                throw new HotelTidakDitemukanException(id);
+            }
 
             while (HOTEL_DATABASE.size() > i) {
                 i++;

@@ -273,12 +273,12 @@ public class JHotel {
             String psn = e.getPesan();
             System.out.println(psn);
         }
-/*
+
 
         System.out.println("--------------------------CustomerTidakDitemukan-------------");
         try
         {
-
+            Boolean c = DatabaseCustomer.removeCustomer(9);
         }
         catch (PelangganTidakDitemukanException e)
         {
@@ -290,25 +290,28 @@ public class JHotel {
         System.out.println("--------------------------HotelTidakDitemukan-------------");
         try
         {
-
+            boolean h = DatabaseHotel.removeHotel(9);
         }
-        catch (HotelTidakDitemukanException e)
-        {
-            String psn = e.getPesan();
+
+       catch (HotelTidakDitemukanException e)
+       {
+           String psn = e.getPesan();
             System.out.println(psn);
         }
+
 
 
         System.out.println("--------------------------RoomTidakDitemukan-------------");
         try
         {
+            boolean r = DatabaseRoom.removeRoom(new Hotel("nama",new Lokasi(7,7,"lokasi"),5),"A999");
 
         }
         catch (RoomTidakDitemukanException e)
         {
             String psn = e.getPesan();
             System.out.println(psn);
-        }*/
+        }
     }
 }
 

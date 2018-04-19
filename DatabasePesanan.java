@@ -65,26 +65,27 @@ public class DatabasePesanan
      */
     public static boolean removePesanan(Pesanan pesan) throws PesananTidakDitemukanException
     {
-        System.out.println("\n\n\n\n\n\ngagalbn\n\n\n\n\n");
+       // System.out.println("\n\n\n\n\n\ngagalbn\n\n\n\n\n");
         for (Pesanan p : PESANAN_DATABASE) {
             if (p.equals(pesan)) {
                 if (p.getRoom() != null) {
                     Administrasi.pesananDibatalkan(p);
-                    System.out.println("\n\n\n\n\n\ngagalvvvv\n\n\n\n\n");
+              //      System.out.println("\n\n\n\n\n\ngagalvvvv\n\n\n\n\n");
                 } else {
                     if (p.getStatusAktif()) {
-                        System.out.println("\n\n\n\n\n\nbbbbgagal\n\n\n\n\n");
+            //            System.out.println("\n\n\n\n\n\nbbbbgagal\n\n\n\n\n");
                         p.setStatusAktif(false);
                     }
                 }
-            }
 
-            if (PESANAN_DATABASE.remove(p)) {
-                System.out.println("\n\n\n\n\n\ngagaljkjkj\n\n\n\n\n");
-                return true;
+
+                if (PESANAN_DATABASE.remove(p)) {
+          //          System.out.println("\n\n\n\n\n\ngagaljkjkj\n\n\n\n\n");
+                    return true;
+                }
             }
         }
-        System.out.println("\n\n\n\n\n\ngagal\n\n\n\n\n");
+        //System.out.println("\n\n\n\n\n\ngagal\n\n\n\n\n");
         throw new PesananTidakDitemukanException(pesan);
 
     }
