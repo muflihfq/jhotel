@@ -27,16 +27,19 @@ public class DatabaseCustomer
      * @param baru - baru merupakan variabel untuk customer baru
      * 
      */
-    public static boolean addCustomer(Customer baru)
+    public static boolean addCustomer(Customer baru) throws PelangganSudahAdaException
     {
         //System.out.println(baru);
 
         for(int i = 0; i < CUSTOMER_DATABASE.size();i++)
         {
-            Customer id = CUSTOMER_DATABASE.get(i);
-            if(id.getID() == baru.getID())
+            Customer id    = CUSTOMER_DATABASE.get(i);
+            Customer email = CUSTOMER_DATABASE.get(i);
+            if(id.getID() == baru.getID() || email.getEmail().equals(baru.getEmail()))
             {
-                return false;
+
+                throw new PelangganSudahAdaException(baru);
+
             }
         }
         LAST_CUSTOMER_ID = baru.getID();
@@ -65,21 +68,58 @@ public class DatabaseCustomer
      * @param  id id customer
      * 
      */
-    public static boolean removeCustomer(int id)
-    {
-        for(Customer c : CUSTOMER_DATABASE)
-        {
-            if(c.getID() == id)
-            {
-                Pesanan p = DatabasePesanan.getPesananAktif(c);
-                DatabasePesanan.removePesanan(p);
-                CUSTOMER_DATABASE.remove(c);
-                return true;
+    public static boolean removeCustomer(int id) throws PelangganTidakDitemukanException {
+        int i = 0;
+        try {
+
+
+            while (CUSTOMER_DATABASE.size() > i) {
+                i++;
+                if(i == CUSTOMER_DATABASE.size()) {
+                    throw new PelangganTidakDitemukanException(CUSTOMER_DATABASE.get(i).getID());
+                }
+
+                CUSTOMER_DATABASE.get(i);
+                if(CUSTOMER_DATABASE.get(i).getID() == id) {
+                    Pesanan p = DatabasePesanan.getPesananAktif(CUSTOMER_DATABASE.get(i));
+                    DatabasePesanan.removePesanan(p);
+                    CUSTOMER_DATABASE.remove(i);
+
+                }
+
+
             }
+        }
+        catch (PesananTidakDitemukanException e) {
+            Pesanan p = DatabasePesanan.getPesananAktif(CUSTOMER_DATABASE.get(i));
+            PesananTidakDitemukanException pe = new PesananTidakDitemukanException(p);
         }
 
         return false;
-    }
+        }
+            /*
+            for (Customer c : CUSTOMER_DATABASE) {
+                if (c.getID() == id) {
+                    Pesanan p = DatabasePesanan.getPesananAktif(c);
+                    DatabasePesanan.removePesanan(p);
+                    CUSTOMER_DATABASE.remove(c);
+                    return true;
+                }
+                else
+                {
+                    throw new PelangganTidakDitemukanException(c);
+                }
+            }
+
+
+            }
+
+
+            catch (PesananTidakDitemukanException e)
+            {
+                throw new PesananTidakDitemukanException();
+            }*/
+
     
     /**
      * metode untuk mengambil data customer dari database

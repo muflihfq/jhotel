@@ -27,9 +27,6 @@ public abstract class Room
     {
         this.hotel = hotel;
         this.nomor_kamar = nomor_kamar;
-        //this.isAvailable = isAvailable;
-        //this.customer = customer;
-        this.dailyTariff = dailyTariff;
         this.status_kamar = StatusKamar.Vacant;
         
     }

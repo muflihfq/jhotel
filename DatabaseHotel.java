@@ -41,13 +41,18 @@ public class DatabaseHotel
      * yang ingin ditambahkan
      *
      */
-    public static boolean addHotel(Hotel baru)
+    public static boolean addHotel(Hotel baru) throws HotelSudahAdaException
     {
         for(Hotel h : HOTEL_DATABASE)
+
         {
-            if(h.getID() == baru.getID())
+
+           // System.out.println("1"+h.getLokasi());
+           // System.out.println("2"+baru.getLokasi());
+            if(h.getID() == baru.getID() || h.getLokasi().getDeskripsi().equals(baru.getLokasi().getDeskripsi()))
             {
-                return false;
+              //  System.out.println("\n\n\n\n\ngagal\n\n\n\n\n");
+                throw new HotelSudahAdaException(h);
             }
         }
 
@@ -76,8 +81,38 @@ public class DatabaseHotel
      * 
      */
 
-    public static boolean removeHotel(int id)
+    public static boolean removeHotel(int id) throws RoomTidakDitemukanException
     {
+        int i = 0;
+        try {
+
+
+            while (HOTEL_DATABASE.size() > i) {
+                i++;
+                if(i == HOTEL_DATABASE.size()) {
+                    Room r = DatabaseRoom.getRoom(HOTEL_DATABASE.get(i),HOTEL_DATABASE.get(i).getNama());
+                    throw new RoomTidakDitemukanException(HOTEL_DATABASE.get(i),r);
+                }
+
+                HOTEL_DATABASE.get(i);
+                if(HOTEL_DATABASE.get(i).getID() == id) {
+                    Room r = DatabaseRoom.getRoom(HOTEL_DATABASE.get(i),HOTEL_DATABASE.get(i).getNama());
+                    DatabaseRoom .removeRoom(HOTEL_DATABASE.get(i),r.getNomorKamar());
+                    HOTEL_DATABASE.remove(i);
+                    return true;
+
+                }
+
+
+            }
+        }
+        catch (RoomTidakDitemukanException e) {
+            Room r = DatabaseRoom.getRoom(HOTEL_DATABASE.get(i),HOTEL_DATABASE.get(i).getNama());
+            RoomTidakDitemukanException re = new RoomTidakDitemukanException(r.getHotel(),r);
+        }
+
+        return false;
+    }/*
         for(Hotel h : HOTEL_DATABASE)
         {
             if(h.getID() == id)
@@ -92,7 +127,7 @@ public class DatabaseHotel
 
             }
         }
-        return false;
+        return false;*/
     }
     
     /**
@@ -102,4 +137,4 @@ public class DatabaseHotel
      * 
      */
 
-}
+

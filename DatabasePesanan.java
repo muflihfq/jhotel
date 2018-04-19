@@ -38,7 +38,7 @@ public class DatabasePesanan
      * @param  baru
      * 
      */
-    public static boolean addPesanan(Pesanan baru)
+    public static boolean addPesanan(Pesanan baru) throws PesananSudahAdaException
     {
 
         for(Pesanan p : PESANAN_DATABASE )
@@ -46,7 +46,9 @@ public class DatabasePesanan
             if(p.getPelanggan().equals(baru.getPelanggan()) && baru.getStatusAktif() == true)
             {
                 System.out.println("Pesanan tidak dapat diproses");
-                return false;
+                throw new PesananSudahAdaException(baru);
+               // return false;
+
             }
 
         }
@@ -61,23 +63,30 @@ public class DatabasePesanan
      * @param  pesan
      * 
      */
-    public static boolean removePesanan(Pesanan pesan) {
+    public static boolean removePesanan(Pesanan pesan) throws PesananTidakDitemukanException
+    {
+        System.out.println("\n\n\n\n\n\ngagalbn\n\n\n\n\n");
         for (Pesanan p : PESANAN_DATABASE) {
             if (p.equals(pesan)) {
                 if (p.getRoom() != null) {
                     Administrasi.pesananDibatalkan(p);
+                    System.out.println("\n\n\n\n\n\ngagalvvvv\n\n\n\n\n");
                 } else {
                     if (p.getStatusAktif()) {
+                        System.out.println("\n\n\n\n\n\nbbbbgagal\n\n\n\n\n");
                         p.setStatusAktif(false);
                     }
                 }
             }
 
             if (PESANAN_DATABASE.remove(p)) {
+                System.out.println("\n\n\n\n\n\ngagaljkjkj\n\n\n\n\n");
                 return true;
             }
         }
-        return false;
+        System.out.println("\n\n\n\n\n\ngagal\n\n\n\n\n");
+        throw new PesananTidakDitemukanException(pesan);
+
     }
 
 

@@ -20,20 +20,22 @@ public class Customer
     /**
      * Constructor for objects of class Customer
      */
-    public Customer(String nama, int tahun, int bulan, int tanggal)
+    public Customer(String nama, int tahun, int bulan, int tanggal,String email)
     {
         DatabaseCustomer db = new DatabaseCustomer();
         id = db.getLastCustomerID() + 1;
         this.dob = new Date(tahun, bulan, tanggal);
         this.nama = nama;
+        this.email = email;
     }
     
-    public Customer(String nama, Date dob )
+    public Customer(String nama, Date dob,String email   )
     {
         DatabaseCustomer db = new DatabaseCustomer();
         id = db.getLastCustomerID() + 1;
         this.nama = nama;
         this.dob = dob;
+        this.email = email;
     }
 
     /**

@@ -33,13 +33,13 @@ public class DatabaseRoom
         return ROOM_DATABASE;
     }
 
-    public static boolean addRoom(Room baru)
+    public static boolean addRoom(Room baru) throws RoomSudahAdaException
     {
         for(Room r : ROOM_DATABASE)
         {
             if(r.getHotel().equals(baru.getHotel()) && r.getNomorKamar().equals(baru.getNomorKamar()))
             {
-                return false;
+                throw new RoomSudahAdaException(r);
             }
         }
         ROOM_DATABASE.add(baru);
@@ -90,7 +90,7 @@ public class DatabaseRoom
         return GET_VACANT;
     }
 
-    public static boolean removeRoom(Hotel hotel, String nomor_kamar)
+    public static boolean removeRoom(Hotel hotel, String nomor_kamar) throws RoomTidakDitemukanException
     {
         boolean balik =false;
         for (Room r : ROOM_DATABASE)
@@ -106,7 +106,7 @@ public class DatabaseRoom
                 else
                 {
                     Administrasi.pesananDibatalkan(r);
-                    balik = false;
+                    throw new RoomTidakDitemukanException(r.getHotel(),r);
                 }
             }
         }
