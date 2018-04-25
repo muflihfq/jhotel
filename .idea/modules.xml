@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/jhotel.iml" filepath="$PROJECT_DIR$/jhotel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JHotel.iml" filepath="$PROJECT_DIR$/JHotel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JHotel_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JHotel_main.iml" group="JHotel" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JHotel_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JHotel_test.iml" group="JHotel" />
     </modules>
   </component>
 </project>

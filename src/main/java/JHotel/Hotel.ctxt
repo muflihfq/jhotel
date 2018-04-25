@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Hotel
+comment0.text=\r\n\ Class\ hotel\ berikut\ berfungsi\ untuk\ mendapatkan\ dan\ memasukkan\r\n\ data-data\ hotel.\r\n\r\n\ @author\ muflih\ fathan\ q\r\n\ @version\ 03/10/2018\r\n
+comment1.params=nama\ lokasi\ bintang
+comment1.target=Hotel(java.lang.String,\ Lokasi,\ int)
+comment1.text=\r\n\ konstruktor\ pada\ class\ hotel\r\n\ @param\ nama,\ lokasi,\ bintang\r\n
+comment2.params=
+comment2.target=int\ getBintang()
+comment2.text=\r\n\ metode\ ini\ berfungsi\ untuk\ mengambil\ nilai/data\r\n\ terkait\ kualitas\ hotel\ (dengan\ skala\ bintang)\r\n\r\n\ @return\ bintang\ -\ bintang\ merupakan\ instance\ variabel\ yang\ menunjukkan\ kualitas\ hotel.\r\n
+comment3.params=
+comment3.target=java.lang.String\ getNama()
+comment3.text=\r\n\ metode\ ini\ berfungsi\ untuk\ mengambil\ nilai/data\r\n\ nama\ hotel\r\n\r\n\ @return\ nama\ -\ nama\ merupakan\ variabel\ yang\ menunjukkan\ nama\ hotel\r\n
+comment4.params=
+comment4.target=Lokasi\ getLokasi()
+comment4.text=\r\n\ metode\ ini\ berfungsi\ untuk\ mengambil\ nilai/data\r\n\ terkait\ lokasi\ hotel\r\n\r\n\ @return\ lokasi\r\n\ lokasi\ merupakan\ variabel\ yang\ menunjukkan\ lokasi\ hotel\ berada\r\n\ lokasi\ merupakan\ data\ yang\ berhubungan\ dengan\ kelas\ lokasi\r\n
+comment5.params=nama
+comment5.target=void\ setNama(java.lang.String)
+comment5.text=\r\n\ metode\ ini\ berfungsi\ untuk\ menginput\ nama\ hotel\r\n\r\n\ @param\ nama\ -\ nama\ hotel\r\n
+comment6.params=lokasi
+comment6.target=void\ setLokasi(Lokasi)
+comment6.text=\r\n\ metode\ ini\ berfungsi\ untuk\ menginput\ lokasi\ hotel\r\n\r\n\ @param\ lokasi\ -\ lokasi\ hotel,yang\ terkait\ dengan\ kelas\ lokasi\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sehingga\ lokasi\ pada\ kelas\ harus\ didefinisikan\ terlebih\ dahulu\r\n
+comment7.params=bintang
+comment7.target=void\ setBintang(int)
+comment7.text=\r\n\ metode\ ini\ berfungsi\ untuk\ menginput\ kualitas\ hotel\r\n\r\n\ @param\ bintang\ -\ kualitas\ hotel\ (dengan\ angka/jumlah)\r\n
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9
