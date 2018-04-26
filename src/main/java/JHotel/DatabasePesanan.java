@@ -115,23 +115,20 @@ public class DatabasePesanan
 
     }
 
-    public static Pesanan getPesanan(Room kamar)
+    public static Pesanan getPesananAktif(Room kamar)
     {
-        Pesanan balik = null;
+
 
         for( int i = 0; i < PESANAN_DATABASE.size();i++)
         {
             if(PESANAN_DATABASE.get(i).getRoom() == kamar)
             {
-                balik = PESANAN_DATABASE.get(i);
+                return PESANAN_DATABASE.get(i);
 
             }
-            else
-            {
-                balik = null;
-            }
+
         }
-    return balik;
+    return null;
     }
 
     /**

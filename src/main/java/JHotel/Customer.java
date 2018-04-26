@@ -13,32 +13,39 @@ import java.text.*;
 public class Customer
 {
     // instance variables - replace the example below with your own
-    protected String nama;
-    protected int id;
-    protected String email;
-    protected Date dob;
+    private String nama;
+    private int id;
+    private String email;
+    private Date dob;
+    private String password;
 
     /**
      * Constructor for objects of class Customer
      */
-    public Customer(String nama, int tahun, int bulan, int tanggal,String email)
+    public Customer(String nama, int tanggal, int bulan, int tahun,String email,String password)
     {
         DatabaseCustomer db = new DatabaseCustomer();
         id = db.getLastCustomerID() + 1;
         this.dob = new Date(tahun, bulan, tanggal);
         this.nama = nama;
+        this.password = password;
         this.email = email;
     }
     
-    public Customer(String nama, Date dob,String email   )
+    public Customer(String nama, Date dob,String email,String password   )
     {
         DatabaseCustomer db = new DatabaseCustomer();
         id = db.getLastCustomerID() + 1;
         this.nama = nama;
         this.dob = dob;
         this.email = email;
+        this.password = password;
     }
 
+    public String getPassword()
+    {
+        return password;
+    }
     /**
      * metode untuk menampilkan atau mengambil ID dari customer
      *
@@ -75,7 +82,11 @@ public class Customer
         System.out.println(result);
         return dob;
     }
-    
+
+    public void setPassword(String password)
+    {
+        this.password = password;
+    }
     
     /**
      * metode untuk memasukkan ID dari customer

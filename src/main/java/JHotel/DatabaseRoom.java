@@ -80,7 +80,7 @@ public class DatabaseRoom {
             if (r.getHotel().equals(hotel) && r.getNomorKamar().equals(nomor_kamar)) {
 
                // System.out.println("\n\n\n\n\ngagal2\n\n\n\n\n");
-                if (DatabasePesanan.getPesanan(r) == null) {
+                if (DatabasePesanan.getPesananAktif(r) == null) {
 
                     //System.out.println("\n\n\n\n\ngagal3\n\n\n\n\n");
                     ROOM_DATABASE.remove(r);

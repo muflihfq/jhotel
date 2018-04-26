@@ -68,7 +68,7 @@ public class DatabaseHotel
         {
             if(h.getID() == id)
             {
-                Hotel hotel = HOTEL_DATABASE.get(id);
+                Hotel hotel = HOTEL_DATABASE.get(id-1);
                 return hotel;
             }
         }

@@ -28,14 +28,17 @@ public class Administrasi
      */
     public static void pesananDitugaskan(Pesanan pesan, Room kamar)
     {
-        pesan.setStatusDiproses(true);
-        pesan.setStatusSelesai(false);
-        pesan.setRoom(kamar);
-        
-        
-        roomAmbilPesanan(pesan,kamar);
-        //pesan.setStatusDiproses = true;
-        //pesan.setStatusSelesai = false;
+        if(kamar.getStatusKamar().equals(StatusKamar.Vacant)) {
+            pesan.setStatusDiproses(true);
+            pesan.setStatusSelesai(false);
+            pesan.setRoom(kamar);
+
+
+            roomAmbilPesanan(pesan, kamar);
+        }
+        else {
+            pesan.setStatusAktif(false);
+        }
     }
     
     /**
@@ -72,11 +75,10 @@ public class Administrasi
      */
     public static void pesananDibatalkan(Room kamar)
     {
-        //kamar.setPesanan(null);
-        Pesanan pesan = DatabasePesanan.getPesanan(kamar);
+
+        Pesanan pesan = DatabasePesanan.getPesananAktif(kamar);
         pesan.setStatusSelesai(false);
         pesan.setStatusDiproses(false);
-        pesan.setRoom(null);
         pesan.setStatusAktif(false);
         
         roomLepasPesanan(kamar);
@@ -92,10 +94,9 @@ public class Administrasi
     {
         
         
-        Pesanan pesan = DatabasePesanan.getPesanan(kamar);
+        Pesanan pesan = DatabasePesanan.getPesananAktif(kamar);
         pesan.setStatusSelesai(true);
         pesan.setStatusDiproses(false);
-        pesan.setRoom(null);
         pesan.setStatusAktif(false);
 
 
@@ -112,8 +113,9 @@ public class Administrasi
         roomLepasPesanan(pesan.getRoom());
 
         pesan.setStatusSelesai(false);
+        pesan.setStatusAktif(false);
         pesan.setStatusDiproses(false);
-        pesan.setRoom(null);
+
     }
     
     /**
@@ -128,7 +130,8 @@ public class Administrasi
 //      pesan.getRoom().setStatusKamar(StatusKamar.Vacant);
        pesan.setStatusSelesai(true);
         pesan.setStatusDiproses(false);
-        pesan.setRoom(null);
+        pesan.setStatusAktif(false);
+
         
         
     }

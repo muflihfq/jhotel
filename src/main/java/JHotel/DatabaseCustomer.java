@@ -54,7 +54,7 @@ public class DatabaseCustomer
     }
     public static Customer getCustomer(int id)
     {
-
+        //System.out.println(id);
         for(int i = 0;i <= CUSTOMER_DATABASE.size();i++)
         {
             int ID = CUSTOMER_DATABASE.get(i).getID();
@@ -142,6 +142,18 @@ public class DatabaseCustomer
     public static ArrayList<Customer> getCustomerDatabase()
     {
         return CUSTOMER_DATABASE;
+    }
+
+    public static Customer getCustomerLogin(String email, String password)
+    {
+        for(Customer c : CUSTOMER_DATABASE)
+        {
+            if(c.getEmail().equals(email) && c.getPassword().equals(password))
+            {
+                return DatabaseCustomer.getCustomer(c.getID());
+            }
+        }
+        return null;
     }
     
 }

@@ -33,6 +33,39 @@ public class JHotel {
 
     public static void main(String[] args) {
 
+        try {
+            Lokasi Depok = new Lokasi(23, 32, "Depok");
+            DatabaseHotel.addHotel(new Hotel("Aston", Depok, 4));
+
+            Lokasi Bogor = new Lokasi(56, 89, "Bogot");
+            DatabaseHotel.addHotel(new Hotel("Hilton", Bogor, 5));
+
+            /*ArrayList<Hotel> Hotel = new DatabaseHotel().getHotelDatabase();
+            for (Hotel h : Hotel) {
+                System.out.println(h);
+            }*/
+
+        } catch (HotelSudahAdaException e) {
+            String psn = e.getPesan();
+            System.out.println(psn);
+        }
+
+        try {
+            DatabaseRoom.addRoom(new DoubleRoom(DatabaseHotel.getHotel(1),"301",StatusKamar.Vacant));
+            DatabaseRoom.addRoom(new SingleRoom(DatabaseHotel.getHotel(1),"601",StatusKamar.Vacant));
+            DatabaseRoom.addRoom(new PremiumRoom(DatabaseHotel.getHotel(2),"301",StatusKamar.Vacant));
+
+
+            /*ArrayList<Room> room = DatabaseRoom.getRoomDatabase();
+
+            for (Room r : room) {
+                System.out.println(r);
+            }*/
+        } catch (RoomSudahAdaException e) {
+            String psn = e.getPesan();
+            System.out.println(psn);
+        }
+
         SpringApplication.run(JHotel.class , args);
 
 
