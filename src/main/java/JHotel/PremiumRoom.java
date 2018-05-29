@@ -1,9 +1,11 @@
 package JHotel;
+
 /**
- * Write a description of class PremiumRoom here.
+ * Class Premium Room, class untuk membuat
+ * objek kamar baru bertipe premium
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author muflih fathan q
+ * @version 20/05/2018
  */
 public class PremiumRoom extends Room
 {
@@ -12,36 +14,57 @@ public class PremiumRoom extends Room
     private static double DISCOUNT = 0.3;
 
     /**
-     * Constructor for objects of class PremiumRoom
+     * Constructor for objects of class SingleRoom
+     *
+     * @param hotel - hotel dimana kamar berada
+     * @param nomor_kamar
+     * @param status_kamar status kamar apakah kosong atau dipesan
      */
     public PremiumRoom(Hotel hotel, String nomor_kamar, StatusKamar status_kamar)
     {
         super(hotel,nomor_kamar,status_kamar);
         
-    }   
+    }
 
     /**
-     * An example of a method - replace this comment with your own
+     *  Constructor onstructor for objects of class PremiumRoom
+     */
+    public PremiumRoom(){}
+
+    /**
+     * metode untuk mendapatkan tipe kamar
+     * dari kamar
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return TIPE_KAMAR
      */
     public TipeKamar getTipeKamar()
     {
         return TIPE_KAMAR;
     }
-    
+
+    /**
+     * metode untuk mendapatkan nilai diskon
+     * dari kamar premium
+     *
+     * @return DISCOUNT
+     */
     public double getDiscount()
     {
         return DISCOUNT;
     }
-    
+
+    /**
+     * metode untuk memasukkan tarif setelah mendapat
+     * potongan diskon
+     *
+     * @param dailytariff
+     */
     public void setDailyTariff(double dailytariff)
     {
-        //this.dailytariff = dailytariff;
-        //* DISCOUNT;
-        dailyTariff = dailytariff * DISCOUNT;
-        //dailyTariff = dailytariff;
+
+        dailyTariff = dailyTariff-(dailytariff * DISCOUNT);
+        //return dailyTariff;
+
         
         
     }

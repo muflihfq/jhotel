@@ -1,43 +1,64 @@
 package JHotel;
 /**
- * Write a description of class DoubleRoom here.
+ * Class Double Room, class untuk membuat
+ * objek kamar baru bertipe double
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author muflih fathan q
+ * @version 20/05/2018
  */
 public class DoubleRoom extends Room
 {
-    // instance variables - replace the example below with your own
+
     private static TipeKamar TIPE_KAMAR = TipeKamar.Double;
-    private Customer customer2;
+    private Customer customer;
 
     /**
      * Constructor for objects of class DoubleRoom
+     *
+     * @param hotel - hotel dimana kamar berada
+     * @param nomor_kamar
+     * @param status_kamar
      */
     public DoubleRoom(Hotel hotel, String nomor_kamar, StatusKamar status_kamar)
     {
         super(hotel,nomor_kamar,status_kamar);
     }
+    /**
+     * Constructor for objects of class DoubleRoom
+     */
+    public DoubleRoom(){}
 
     /**
-     * An example of a method - replace this comment with your own
+     * metode untuk mendapatkan pelanggan
+     * yang memesan kamar
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return customer
      */
-    public Customer getCustomer2()
+    public Customer getCustomer()
     {
-        return customer2;
+        return customer;
     }
-    
+
+    /**
+     * metode untuk mendapatkan tipe kamar
+     * dari kamar
+     *
+     * @return TIPE_KAMAR
+     */
     public TipeKamar getTipeKamar()
     {
         return TIPE_KAMAR;
     }
-    
-    public void setCustomer2(Customer customer2)
+
+    /**
+     * metode untuk memberikan pelanggan
+     * ke dalama kamar
+     *
+     * @param customer
+     */
+    public void setCustomer(Customer customer)
     {
-        this.customer2 = customer2;
+        this.customer = customer;
     }
     
     

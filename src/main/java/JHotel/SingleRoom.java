@@ -1,9 +1,11 @@
 package JHotel;
+
 /**
- * Write a description of class SingleRoom here.
+ * Class Single Room, class untuk membuat
+ * objek kamar baru bertipe single
  *
- e* @author
- * @version (a version number or a date)
+ * @author muflih fathan q
+ * @version 20/05/2018
  */
 public class SingleRoom extends Room
 {
@@ -12,6 +14,10 @@ public class SingleRoom extends Room
 
     /**
      * Constructor for objects of class SingleRoom
+     *
+     * @param hotel - hotel dimana kamar berada
+     * @param nomor_kamar
+     * @param status_kamar status kamar apakah kosong atau dipesan
      */
     public SingleRoom(Hotel hotel, String nomor_kamar,
                  StatusKamar status_kamar)
@@ -22,10 +28,16 @@ public class SingleRoom extends Room
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Constructor for objects of class SingleRoom
+     */
+
+     public SingleRoom(){}
+
+    /**
+     * metode untuk mendapatkan tipe kamar
+     * dari kamar
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return TIPE_KAMAR
      */
     public TipeKamar getTipeKamar()
     {

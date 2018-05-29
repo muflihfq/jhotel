@@ -4,7 +4,7 @@ package JHotel;
  * pada kamar hotel 
  * 
  * @author muflih fathan q
- * @version 03/10/2018
+ * @version 05/20/2018
  */
  
 public enum StatusKamar
@@ -13,11 +13,20 @@ public enum StatusKamar
     
     private String deskripsi;
 
+    /**
+     * metode untuk memasukkan status kamar
+     *
+     * @param deskripsi
+     */
     StatusKamar(String deskripsi)
     {
         this.deskripsi = deskripsi;
     }
 
+    /**
+     *
+     * @return status kamar
+     */
     public String toString()
     {
         return deskripsi;

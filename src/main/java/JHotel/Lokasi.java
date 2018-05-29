@@ -3,7 +3,7 @@ package JHotel;
  * Class untuk menunjukkan lokasi atau tempat
  *
  * @author muflih fathan q
- * @version 03/10/2018
+ * @version 05/20/2018
  */
 public class Lokasi
 {
@@ -14,6 +14,10 @@ public class Lokasi
 
     /**
      * Constructor untuk objek pada lokasi
+     *
+     * @param x_coord titik koordinat x
+     * @param y_coord titik koordiant y
+     * @param deskripsiLokasi deskripsi lokasi (nama kota)
      */
     public Lokasi(float x_coord,float y_coord,String deskripsiLokasi)
     {
@@ -80,31 +84,24 @@ public class Lokasi
     /**
      * metode untuk memasukkan data deskripsi dari lokasi
      * 
-     * @param deskrispiLokasi berisi deskripsi lokasi terkait
+     * @param deskripsi berisi deskripsi lokasi terkait
      */
     public void setDeskripsi(String deskripsi)
     {
         deskripsiLokasi = deskripsi;
     }
-    
+
+    /**
+     * metode untuk mencetak data
+     *
+     * @return String pesan
+     *
+     */
+
     public String toString()
     {
         return "\nKoordinat X : "+x_coord+
                "\nKoordinat Y : "+y_coord+
                "\nDeskripsi   : "+deskripsiLokasi;
     }
-    
-    /*
-     * metode untuk mencetak data
-     * 
-     
-    public void printData()
-    {
-        System.out.println("X koordinat :" +x_coord);
-        System.out.println("Y koordinat :" +y_coord);
-        System.out.println("Deskripsi Lokasi :" +deskripsiLokasi);
-        
-    }
-    */
-    
 }

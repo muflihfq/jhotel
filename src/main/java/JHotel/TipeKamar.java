@@ -4,21 +4,29 @@ package JHotel;
  * tersedia pada hotel 
  * 
  * @author muflih fathan q
- * @version 03/10/2018
+ * @version 05/20/2018
  */
 public enum TipeKamar
 {
     Single("Single"),Double("Double"),Premium("Premium");
 
 
-    //private String tipe;
+
     private String deskripsi;
 
+    /**
+     * metode untuk memasukkan tipe kamar
+     * @param deskripsi
+     */
     TipeKamar(String deskripsi)
     {
         this.deskripsi = deskripsi;
     }
 
+    /**
+     *
+     * @return tipe kamar
+     */
     public String toString()
     {
         return deskripsi;

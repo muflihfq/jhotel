@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="jhotel@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.8">
+    <root id="1">
+      <ServerVersion>10.4</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="jhotel">
+      <ObjectId>16394</ObjectId>
+      <IntrospectionStateNumber>116</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12938</ObjectId>
+      <Comment>default administrative connection database</Comment>
+    </database>
+    <role id="4" parent="1" name="muflih">
+      <ObjectId>16393</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="5" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="6" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="11" parent="2" name="information_schema">
+      <ObjectId>12648</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+    </schema>
+    <schema id="13" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+    </schema>
+    <schema id="15" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <IntrospectionTimestamp>2018-05-27.21:54:04.453</IntrospectionTimestamp>
+      <IntrospectionStateNumber>910</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="17" parent="2" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="18" parent="2" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="19" parent="2" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="20" parent="2" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="21" parent="2" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="22" parent="2" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <table id="23" parent="16" name="admin">
+      <ObjectId>16510</ObjectId>
+      <StateNumber>910</StateNumber>
+    </table>
+    <table id="24" parent="16" name="customer">
+      <ObjectId>16395</ObjectId>
+      <StateNumber>559</StateNumber>
+    </table>
+    <table id="25" parent="16" name="hotel">
+      <ObjectId>16401</ObjectId>
+      <StateNumber>599</StateNumber>
+    </table>
+    <table id="26" parent="16" name="pesanan">
+      <ObjectId>16434</ObjectId>
+      <StateNumber>659</StateNumber>
+    </table>
+    <table id="27" parent="16" name="pesanan_customer">
+      <ObjectId>16419</ObjectId>
+      <StateNumber>712</StateNumber>
+    </table>
+    <table id="28" parent="16" name="pesanan_room">
+      <ObjectId>16422</ObjectId>
+      <StateNumber>705</StateNumber>
+    </table>
+    <table id="29" parent="16" name="pesanan_room_hotel">
+      <ObjectId>16481</ObjectId>
+      <StateNumber>717</StateNumber>
+    </table>
+    <table id="30" parent="16" name="room">
+      <ObjectId>16443</ObjectId>
+      <StateNumber>621</StateNumber>
+    </table>
+    <table id="31" parent="16" name="room_hotel">
+      <ObjectId>16413</ObjectId>
+      <StateNumber>601</StateNumber>
+    </table>
+    <routine id="32" parent="16" name="hapuscustomer">
+      <ObjectId>16479</ObjectId>
+      <StateNumber>711</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="33" parent="16" name="hapushotel">
+      <ObjectId>16487</ObjectId>
+      <StateNumber>740</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="34" parent="16" name="hapuspesanan">
+      <ObjectId>16462</ObjectId>
+      <StateNumber>662</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="35" parent="16" name="hapusroom">
+      <ObjectId>16472</ObjectId>
+      <StateNumber>709</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <column id="36" parent="23" name="email">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>910</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="37" parent="23" name="password">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>910</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="38" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>559</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="39" parent="24" name="nama">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>559</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="40" parent="24" name="password">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>559</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="41" parent="24" name="email">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>559</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="42" parent="24" name="dob">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <StateNumber>559</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="43" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>599</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="44" parent="25" name="nama">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>599</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="45" parent="25" name="lokasi">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>599</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="46" parent="25" name="bintang">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>599</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="47" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>610</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="48" parent="26" name="biaya">
+      <Position>2</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>610</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="49" parent="26" name="jumlah_hari">
+      <Position>3</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>610</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="50" parent="26" name="tanggal">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <StateNumber>610</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="51" parent="26" name="status_aktif">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>610</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="52" parent="26" name="status_selesai">
+      <Position>6</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>610</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="53" parent="26" name="status_proses">
+      <Position>7</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>610</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <trigger id="54" parent="26" name="deletepesan">
+      <ObjectId>16471</ObjectId>
+      <StateNumber>659</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>D</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16462</CallRoutineId>
+    </trigger>
+    <column id="55" parent="27" name="id_pesanan">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>602</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="56" parent="27" name="id_customer">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>602</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <trigger id="57" parent="27" name="deleteroom">
+      <ObjectId>16480</ObjectId>
+      <StateNumber>712</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>D</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16479</CallRoutineId>
+    </trigger>
+    <column id="58" parent="28" name="id_pesanan">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>602</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="59" parent="28" name="nomor_kamar">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>602</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <trigger id="60" parent="28" name="deleteroom">
+      <ObjectId>16478</ObjectId>
+      <StateNumber>705</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>D</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16472</CallRoutineId>
+    </trigger>
+    <column id="61" parent="29" name="id_pesanan">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>715</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="62" parent="29" name="nomor_kamar">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>715</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="63" parent="29" name="id_hotel">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>715</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <trigger id="64" parent="29" name="deletehotel">
+      <ObjectId>16488</ObjectId>
+      <StateNumber>717</StateNumber>
+      <Turn>after-row</Turn>
+      <Events>D</Events>
+      <FireMode>origin</FireMode>
+      <CallRoutineId>16487</CallRoutineId>
+    </trigger>
+    <column id="65" parent="30" name="nomor_kamar">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>618</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="66" parent="30" name="dailytariff">
+      <Position>2</Position>
+      <DataType>double precision|0s</DataType>
+      <StateNumber>621</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="67" parent="30" name="status_kamar">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>618</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="68" parent="30" name="tipe_kamar">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>618</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="69" parent="31" name="id_hotel">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>601</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="70" parent="31" name="nomor_kamar">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>601</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <argument id="71" parent="32">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+    <argument id="72" parent="33">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+    <argument id="73" parent="34">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+    <argument id="74" parent="35">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>trigger|0s</DataType>
+    </argument>
+  </database-model>
+</dataSource>

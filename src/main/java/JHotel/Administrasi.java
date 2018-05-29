@@ -4,7 +4,7 @@ package JHotel;
  * kamar pada hotel
  * 
  * @author muflih fathan q
- * @version 03/10/2018
+ * @version 05/20/2018
  */
 public class Administrasi
 {
@@ -77,9 +77,7 @@ public class Administrasi
     {
 
         Pesanan pesan = DatabasePesanan.getPesananAktif(kamar);
-        pesan.setStatusSelesai(false);
-        pesan.setStatusDiproses(false);
-        pesan.setStatusAktif(false);
+        DatabasePesanan.setStatusPesanan(pesan.getID(),false,false,false);
         
         roomLepasPesanan(kamar);
     }
@@ -95,9 +93,7 @@ public class Administrasi
         
         
         Pesanan pesan = DatabasePesanan.getPesananAktif(kamar);
-        pesan.setStatusSelesai(true);
-        pesan.setStatusDiproses(false);
-        pesan.setStatusAktif(false);
+        DatabasePesanan.setStatusPesanan(pesan.getID(),false,true,false);
 
 
         roomLepasPesanan(kamar);
@@ -111,11 +107,7 @@ public class Administrasi
     public static void pesananDibatalkan(Pesanan pesan)
     {
         roomLepasPesanan(pesan.getRoom());
-
-        pesan.setStatusSelesai(false);
-        pesan.setStatusAktif(false);
-        pesan.setStatusDiproses(false);
-
+        DatabasePesanan.setStatusPesanan(pesan.getID(),false,false,false);
     }
     
     /**
@@ -128,9 +120,7 @@ public class Administrasi
     {
         roomLepasPesanan(pesan.getRoom());
 //      pesan.getRoom().setStatusKamar(StatusKamar.Vacant);
-       pesan.setStatusSelesai(true);
-        pesan.setStatusDiproses(false);
-        pesan.setStatusAktif(false);
+        DatabasePesanan.setStatusPesanan(pesan.getID(),false,true,false);
 
         
         

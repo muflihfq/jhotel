@@ -4,7 +4,7 @@ package JHotel;
  * data-data hotel.
  *
  * @author muflih fathan q
- * @version 03/10/2018
+ * @version 05/20/2018
  */
 public class Hotel
 {
@@ -26,7 +26,18 @@ public class Hotel
         this.bintang = bintang;
         id = db.getLastHotelID() + 1;
     }
+    /**
+     * konstruktor pada class hotel
+     *
+     */
+    public Hotel(){}
 
+    /**
+     * metode untuk mendapatkan id hotel
+     * dari hotel yang bersangkutan
+     *
+     * @return id nilai identifikasi dari hotel
+     */
     public int getID()
     {
         return id;
@@ -65,17 +76,22 @@ public class Hotel
     {
         return lokasi;
     }
-    
+
     /**
-     * metode ini berfungsi untuk menginput nama hotel
+     * metode ini berfungsi untuk menginput id hotel
      *
-     *
+     * @param id
      */
     public void setID(int id)
     {
         this.id = id;
     }
 
+    /**
+     * metode ini berfungsi untuk menginput nama hotel
+     *
+     * @param nama
+     */
     public void setNama(String nama)
     {
         this.nama = nama;
@@ -101,7 +117,13 @@ public class Hotel
     {
         this.bintang = bintang;
     }
-    
+
+    /**
+     * metode untuk mencetak data
+     *
+     * @return String pesan
+     *
+     */
     public String toString()
     {
         return "\nNama Hotel : "+nama+
@@ -109,18 +131,5 @@ public class Hotel
                "\nBintang    : "+bintang;
         
     }
-    /*
-     * metode ini berfungsi untuk mencetak data
-     *
-     * 
-    
-    public void printData()
-    {
-       System.out.println("Nama Hotel:" +nama);
-       System.out.println("Lokasi :" +lokasi.getDeskripsi());
-       System.out.println("Bintang :" +bintang);
-        
-    }
-     */
-    
+
 }
